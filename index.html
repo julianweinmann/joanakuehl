@@ -12,6 +12,7 @@
         body { font-family: 'Inter', sans-serif; background-color: #FAF9F7; color: #5C5C5C; }
         h1, h2, h3, .nav-font { font-family: 'Montserrat', sans-serif; }
         .bg-cloudy-mint { background-color: #D9ECE6; }
+        .bg-light-beige { background-color: #FAF9F7; }
         .text-accent-orange { color: #F29979; }
         .bg-accent-orange { background-color: #F29979; }
         .hover\:bg-accent-orange-dark:hover { background-color: #e68a68; }
@@ -54,12 +55,49 @@
     </header>
 
     <main>
-        <!-- Content Sections -->
+        <!-- ÜBER MICH SECTION -->
         <section id="ueber-mich" class="bg-light-beige">
-            <!-- ... content ... -->
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="md:flex md:items-center md:space-x-12">
+                    <div class="md:w-1/3 mb-8 md:mb-0 text-center">
+                        <img src="/image_c2221d.jpg" 
+                             alt="Portrait von Joana Kühl" 
+                             class="rounded-full mx-auto shadow-soft w-48 h-48 md:w-64 md:h-64 object-cover">
+                    </div>
+                    <div class="md:w-2/3">
+                        <h2 class="text-3xl md:text-4xl font-medium text-warm-grey mb-6 text-center md:text-left">Über Mich</h2>
+                        <p class="text-lg mb-4 leading-relaxed">
+                            Herzlich willkommen. Mein Name ist Joana Kühl und als Psychologin und Psychotherapeutin in Ausbildung ist es meine Herzensangelegenheit, Sie auf Ihrem Weg zu begleiten. Mit einem tiefen Verständnis für die Komplexität menschlicher Emotionen und Beziehungen biete ich Ihnen einen sicheren Raum für Wachstum und Heilung.
+                        </p>
+                        <p class="text-lg leading-relaxed">
+                            Mein systemischer Ansatz ermöglicht es uns, nicht nur individuelle Herausforderungen zu betrachten, sondern auch die Dynamiken in Ihren Beziehungen und Ihrem Umfeld. Ein besonderer Schwerpunkt meiner Arbeit liegt auf der Begleitung von Kindern, Jugendlichen und Erwachsenen mit Hochsensibilität. Ich bin davon überzeugt, dass Empathie und eine vertrauensvolle Beziehung die Basis für eine erfolgreiche Therapie sind.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
+        <!-- ANGEBOT SECTION -->
         <section id="angebot" class="bg-cloudy-mint">
-            <!-- ... content ... -->
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-medium text-warm-grey mb-12 text-center">Mein Angebot</h2>
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="bg-white p-8 rounded-2xl shadow-soft text-center">
+                        <h3 class="text-2xl font-medium text-warm-grey mb-4">Einzelgespräche</h3>
+                        <p class="text-base leading-relaxed">Individuelle Begleitung für Erwachsene bei persönlichen Krisen, beruflichen Herausforderungen oder dem Wunsch nach persönlicher Weiterentwicklung.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-soft text-center">
+                        <h3 class="text-2xl font-medium text-warm-grey mb-4">Familienberatung</h3>
+                        <p class="text-base leading-relaxed">Systemische Unterstützung für Familien, um Kommunikationsmuster zu verbessern, Konflikte zu lösen und den Zusammenhalt zu stärken.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-soft text-center">
+                        <h3 class="text-2xl font-medium text-warm-grey mb-4">HSP-Coaching</h3>
+                        <p class="text-base leading-relaxed">Spezialisierte Beratung und Coaching für hochsensible Personen (HSP), um die eigenen Stärken zu erkennen und den Alltag gelassener zu meistern.</p>
+                    </div>
+                </div>
+                 <div class="text-center mt-12">
+                    <a href="/konditionen/" class="text-warm-grey hover:text-accent-orange transition-colors underline">Weitere Informationen zu den Konditionen und Preisen finden Sie hier.</a>
+                </div>
+            </div>
         </section>
     </main>
 
