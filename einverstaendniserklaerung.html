@@ -41,16 +41,27 @@
       button:hover {
         background-color: #006666;
       }
+      a {
+        color: #008080;
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
     <h1>Einverständniserklärung zur psychologischen Beratung</h1>
+
     <p>
       Diese psychologische Beratung ist ein kostenpflichtiges Angebot. Es handelt sich nicht um eine kassenärztlich finanzierte Psychotherapie.
     </p>
+
     <p>
-      Das Honorar beträgt 80 € pro 50 Minuten, außer anderweitig ausgemacht. Ermäßigungen sind auf Anfrage möglich (z. B. bei niedrigem Einkommen).
-      Die Abrechnung erfolgt direkt mit Ihnen – Sie erhalten im Anschluss eine Rechnung per E-Mail.
+      Das Honorar beträgt <strong>80 € pro 50 Minuten</strong>. Die Abrechnung erfolgt direkt mit Ihnen – Sie erhalten im Anschluss eine <strong>Rechnung per E-Mail</strong>.
+    </p>
+
+    <p>
+      Weitere Informationen: 
+      <a href="https://joanakuehl.com/hinweise" target="_blank">Hinweise zur Beratung</a> · 
+      <a href="https://joanakuehl.com/datenschutz" target="_blank">Datenschutzerklärung</a>
     </p>
 
     <form action="https://form.taxi/s/91u7s0gv" method="POST">
@@ -65,12 +76,13 @@
       <label for="email">E-Mail-Adresse (Pflichtfeld)</label>
       <input type="email" id="email" name="email" required />
 
-      <label for="adresse">Adresse (optional – für die Rechnung)</label>
-      <input type="text" id="adresse" name="adresse" />
+      <label for="adresse">Adresse (Pflichtfeld – für die Rechnung)</label>
+      <input type="text" id="adresse" name="adresse" required />
 
       <label>
         <input type="checkbox" name="zustimmung" required />
-        Ich habe die Hinweise zur Beratung gelesen und stimme zu, dass es sich nicht um eine kassenärztliche Psychotherapie handelt.
+        Ich habe die <a href="https://joanakuehl.com/hinweise" target="_blank">Hinweise zur Beratung</a> gelesen und stimme zu,
+        dass es sich nicht um eine kassenärztliche Psychotherapie handelt.
         Meine Daten dürfen zum Zweck der Terminbuchung und Rechnungsstellung verarbeitet werden.
       </label>
 
