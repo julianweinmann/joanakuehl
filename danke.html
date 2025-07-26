@@ -2,50 +2,82 @@
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <title>Danke für deine Nachricht</title>
+    <title>Einverständniserklärung zur psychologischen Beratung</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
       body {
         font-family: sans-serif;
-        text-align: center;
-        padding: 80px 20px;
-        background-color: #f6f8f9;
-        color: #333;
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 0 20px;
       }
       h1 {
-        color: #008080;
+        font-size: 1.6em;
+        margin-bottom: 0.5em;
       }
-      p {
-        font-size: 1.1em;
+      label {
+        display: block;
         margin-top: 1em;
       }
-      a.button {
-        display: inline-block;
-        margin-top: 2.5em;
-        padding: 12px 24px;
-        background-color: #008080;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 100%;
+        padding: 8px;
+        font-size: 1em;
+        margin-top: 0.3em;
+        box-sizing: border-box;
       }
-      a.button:hover {
+      button {
+        margin-top: 1.5em;
+        padding: 10px 20px;
+        font-size: 1em;
+        background-color: #008080;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
         background-color: #006666;
       }
     </style>
   </head>
   <body>
-    <h1>Vielen Dank für deine Nachricht!</h1>
+    <h1>Einverständniserklärung zur psychologischen Beratung</h1>
     <p>
-      Deine Einverständniserklärung wurde erfolgreich übermittelt.<br />
-      Bei Fragen kannst du dich jederzeit an <a href="mailto:info@joanakuehl.com">info@joanakuehl.com</a> wenden.
+      Die psychologische Beratung erfolgt im Rahmen meiner Tätigkeit als <strong>Psychotherapeutin in Ausbildung</strong>
+      (nach § 2 PsychTh-APrV) und ist ein <strong>privates, kostenpflichtiges Angebot</strong> außerhalb der gesetzlichen Krankenversicherung.
+    </p>
+    <p>
+      Das Honorar beträgt <strong>80 € pro 50-minütiger Sitzung</strong>, sofern nicht im Einzelfall eine abweichende Vereinbarung getroffen wurde.
+    </p>
+    <p>
+      Die Abrechnung erfolgt direkt mit Ihnen – Sie erhalten im Anschluss eine <strong>Rechnung per E-Mail</strong>.
     </p>
 
-    <a
-      class="button"
-      href="https://calendly.com/joanakuehl-info/psychologische-beratung?back=1&month=2025-07"
-      target="_blank"
-      >Jetzt Termin buchen</a
-    >
+    <form action="https://form.taxi/s/91u7s0gv" method="POST">
+      <input type="hidden" name="_redirect" value="https://julianweinmann.github.io/joanakuehl/danke.html" />
+
+      <label for="vorname">Vorname (Pflichtfeld)</label>
+      <input type="text" id="vorname" name="vorname" required />
+
+      <label for="nachname">Nachname (Pflichtfeld)</label>
+      <input type="text" id="nachname" name="nachname" required />
+
+      <label for="email">E-Mail-Adresse (Pflichtfeld)</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="adresse">Adresse (optional – für die Rechnung)</label>
+      <input type="text" id="adresse" name="adresse" />
+
+      <label>
+        <input type="checkbox" name="zustimmung" required />
+        Ich habe die Hinweise zur Beratung gelesen und stimme zu, dass es sich nicht um eine psychotherapeutische Behandlung im Rahmen der gesetzlichen Krankenversicherung handelt.
+        Meine Daten dürfen zum Zweck der Terminbuchung und Rechnungsstellung verarbeitet werden.
+      </label>
+
+      <button type="submit">Absenden</button>
+    </form>
   </body>
 </html>
