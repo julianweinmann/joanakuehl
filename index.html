@@ -25,13 +25,12 @@
         .hover\:bg-accent-orange-dark:hover { background-color: #e68a68; }
         .bg-dark-grey { background-color: #4a4a4a; }
         .shadow-soft { box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); }
-        .scroll-smooth { scroll-behavior: smooth; }
         html { scroll-behavior: smooth; }
         section { padding: 4rem 1rem; }
         @media (min-width: 768px) {
             section { padding: 6rem 2rem; }
         }
-        .calendly-inline-widget, .typeform-widget {
+        .calendly-inline-widget, .tally-widget {
             min-width: 320px;
             height: 700px;
             border-radius: 1rem;
@@ -63,11 +62,11 @@
     <nav id="navbar" class="nav-sticky nav-font">
         <div class="container mx-auto px-6">
             <div class="flex justify-between items-center py-4">
-                <a href="#home" class="text-lg font-semibold text-warm-grey" style="color: #4a4a4a;">Joana Kühl</a>
+                <a href="/" class="text-lg font-semibold text-warm-grey" style="color: #4a4a4a;">Joana Kühl</a>
                 <div class="hidden md:flex items-center space-x-6">
                     <a href="#ueber-mich" class="text-gray-600 hover:text-accent-orange transition-colors">Über Mich</a>
                     <a href="#angebot" class="text-gray-600 hover:text-accent-orange transition-colors">Angebot</a>
-                    <a href="konditionen" class="text-gray-600 hover:text-accent-orange transition-colors">Konditionen</a>
+                    <a href="/konditionen/" class="text-gray-600 hover:text-accent-orange transition-colors">Konditionen</a>
                 </div>
                 <a href="#termin" class="bg-accent-orange text-white font-semibold py-2 px-6 rounded-full shadow-soft hover:bg-accent-orange-dark transition-colors duration-300">
                     Termin buchen
@@ -135,7 +134,7 @@
                     </div>
                 </div>
                  <div class="text-center mt-12">
-                    <a href="konditionen" class="text-warm-grey hover:text-accent-orange transition-colors underline">Weitere Informationen zu den Konditionen und Preisen finden Sie hier.</a>
+                    <a href="/konditionen/" class="text-warm-grey hover:text-accent-orange transition-colors underline">Weitere Informationen zu den Konditionen und Preisen finden Sie hier.</a>
                 </div>
             </div>
         </section>
@@ -155,35 +154,7 @@
         <!-- HSP-SELBSTTEST SECTION (CURRENTLY HIDDEN) -->
         <!--
         <section id="hsp-test" class="bg-light-beige">
-            <div class="container mx-auto px-6 text-center max-w-4xl">
-                <h2 class="text-3xl md:text-4xl font-medium text-warm-grey mb-6">Sind Sie hochsensibel?</h2>
-                <p class="text-lg mb-8 leading-relaxed">
-                    Hochsensibilität ist keine Krankheit, sondern ein Persönlichkeitsmerkmal. Finden Sie mit diesem kurzen, unverbindlichen Selbsttest heraus, ob Sie zu den hochsensiblen Menschen gehören könnten.
-                </p>
-                <div class="tally-widget shadow-soft mx-auto" style="width:100%; max-width: 640px; height:700px;">
-                     <iframe
-                        data-tally-src="https://tally.so/embed/YOUR_TALLY_ID_HERE?hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                        loading="lazy"
-                        width="100%"
-                        height="100%"
-                        frameborder="0"
-                        marginheight="0"
-                        marginwidth="0"
-                        title="HSP Selbsttest">
-                    </iframe>
-                    <script>
-                        var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}
-                    </script>
-                </div>
-                 <div class="bg-white p-6 rounded-lg mt-8 shadow-inner border border-gray-200">
-                    <p class="text-gray-600"><strong>Hinweis:</strong> Dieser Test dient nur der ersten Orientierung und ersetzt keine professionelle psychologische Diagnostik.</p>
-                </div>
-                <div class="mt-12">
-                     <a href="#termin" class="bg-accent-orange text-white font-semibold py-3 px-8 rounded-full shadow-soft hover:bg-accent-orange-dark transition-colors duration-300 inline-block">
-                        Termin vereinbaren
-                    </a>
-                </div>
-            </div>
+            ...
         </section>
         -->
     </main>
@@ -193,14 +164,14 @@
         <div class="container mx-auto px-6 py-12">
             <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-4 md:space-y-0">
                 <div class="md:order-1">
-                    <p class="text-sm opacity-90">&copy; 2024 Joana Kühl. Alle Rechte vorbehalten.</p>
+                    <p class="text-sm opacity-90">&copy; 2025 Joana Kühl. Alle Rechte vorbehalten.</p>
                 </div>
                 <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 md:order-3">
-                     <a href="impressum.html" class="text-sm hover:text-accent-orange transition-colors">Impressum</a>
+                     <a href="/impressum/" class="text-sm hover:text-accent-orange transition-colors">Impressum</a>
                      <span class="opacity-50 hidden md:inline">|</span>
-                     <a href="datenschutz.html" class="text-sm hover:text-accent-orange transition-colors">Datenschutz</a>
+                     <a href="/datenschutz/" class="text-sm hover:text-accent-orange transition-colors">Datenschutz</a>
                      <span class="opacity-50 hidden md:inline">|</span>
-                      <a href="konditionen" class="text-sm hover:text-accent-orange transition-colors">Konditionen</a>
+                      <a href="/konditionen/" class="text-sm hover:text-accent-orange transition-colors">Konditionen</a>
                      <span class="opacity-50 hidden md:inline">|</span>
                      <a href="/einverstaendniserklaerung/" class="text-sm hover:text-accent-orange transition-colors">Einverständniserklärung</a>
                 </div>
