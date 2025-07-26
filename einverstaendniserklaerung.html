@@ -41,26 +41,20 @@
       button:hover {
         background-color: #006666;
       }
-      .info-text {
-        font-size: 0.9em;
-        margin-top: 2em;
-        color: #555;
-      }
     </style>
   </head>
   <body>
     <h1>Einverständniserklärung zur psychologischen Beratung</h1>
     <p>
-      Diese psychologische Beratung ist ein <strong>kostenpflichtiges Angebot</strong> im Rahmen meiner Tätigkeit als
-      <strong>Psychotherapeutin in Ausbildung</strong>. Es handelt sich <strong>nicht</strong> um eine kassenärztlich finanzierte Psychotherapie.
+      Diese psychologische Beratung ist ein kostenpflichtiges Angebot. Es handelt sich nicht um eine kassenärztlich finanzierte Psychotherapie.
     </p>
     <p>
-      Die Abrechnung erfolgt direkt mit Ihnen – Sie erhalten im Anschluss eine <strong>Rechnung per E-Mail</strong>. <br />
-      Das Honorar beträgt <strong>80 € pro 50 Minuten</strong>.
+      Das Honorar beträgt 80 € pro 50 Minuten, außer anderweitig ausgemacht. Ermäßigungen sind auf Anfrage möglich (z. B. bei niedrigem Einkommen).
+      Die Abrechnung erfolgt direkt mit Ihnen – Sie erhalten im Anschluss eine Rechnung per E-Mail.
     </p>
 
     <form action="https://form.taxi/s/91u7s0gv" method="POST">
-      <input type="hidden" name="_redirect" value="https://julianweinmann.github.io/joanakuehl/danke.html" />
+      <input type="hidden" name="_redirect" value="https://joanakuehl.com/danke" />
 
       <label for="vorname">Vorname (Pflichtfeld)</label>
       <input type="text" id="vorname" name="vorname" required />
@@ -71,8 +65,8 @@
       <label for="email">E-Mail-Adresse (Pflichtfeld)</label>
       <input type="email" id="email" name="email" required />
 
-      <label for="adresse">Adresse (Pflichtfeld – für die Rechnung)</label>
-      <input type="text" id="adresse" name="adresse" required />
+      <label for="adresse">Adresse (optional – für die Rechnung)</label>
+      <input type="text" id="adresse" name="adresse" />
 
       <label>
         <input type="checkbox" name="zustimmung" required />
@@ -82,10 +76,5 @@
 
       <button type="submit">Absenden</button>
     </form>
-
-    <p class="info-text">
-      Die angegebenen personenbezogenen Daten werden ausschließlich zur Kommunikation, Terminorganisation und Rechnungsstellung im Rahmen der psychologischen Beratung verwendet. Eine Weitergabe an Dritte erfolgt nicht.<br />
-      Weitere Informationen finden Sie in der <a href="https://joanakuehl.com/datenschutz" target="_blank">Datenschutzerklärung</a>.
-    </p>
   </body>
 </html>
