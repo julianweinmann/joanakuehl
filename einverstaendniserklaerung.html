@@ -1,82 +1,67 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Einverständniserklärung zur psychologischen Beratung</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      max-width: 600px;
-      margin: 2rem auto;
-      padding: 1rem;
-      line-height: 1.6;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    h1 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-    form {
-      margin-top: 2rem;
-    }
-    label {
-      display: block;
-      margin-top: 1rem;
-    }
-    button {
-      margin-top: 1.5rem;
-      padding: 0.6rem 1.2rem;
-      font-size: 1rem;
-      background-color: #007BFF;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #0056b3;
-    }
-  </style>
-</head>
-<body>
-  <h1>Einverständniserklärung zur psychologischen Beratung</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Einverständniserklärung zur psychologischen Beratung</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: sans-serif;
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+      h1 {
+        font-size: 1.6em;
+        margin-bottom: 0.5em;
+      }
+      label {
+        display: block;
+        margin-top: 1em;
+      }
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 100%;
+        padding: 8px;
+        font-size: 1em;
+        margin-top: 0.3em;
+        box-sizing: border-box;
+      }
+      button {
+        margin-top: 1.5em;
+        padding: 10px 20px;
+        font-size: 1em;
+        background-color: #008080;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #006666;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Einverständniserklärung zur psychologischen Beratung</h1>
+    <p>
+      Diese Beratung ist keine kassenärztlich finanzierte Psychotherapie, sondern ein privates Angebot im Rahmen meiner Tätigkeit als Kinder- und Jugendlichenpsychotherapeutin in Ausbildung (i.A.).
+    </p>
 
-  <p>
-    Ich nehme an einer psychologischen Beratung durch Joana Kühl, M.Sc. Psychologie,
-    Kinder- und Jugendlichenpsychotherapeutin in Ausbildung (i.A.), teil.
-  </p>
-  <p>
-    Ich bin darüber informiert, dass:
-    <ul>
-      <li>die Beratung keine kassenärztlich finanzierte Psychotherapie ist,</li>
-      <li>sie auf privater Basis erfolgt (Honorar: 80 €),</li>
-      <li>keine heilkundliche Diagnose oder Behandlung stattfindet,</li>
-      <li>meine Daten vertraulich und gemäß DSGVO verarbeitet werden.</li>
-    </ul>
-  </p>
-  <p>Mit dem Absenden des Formulars erkläre ich mein Einverständnis.</p>
+    <form action="https://form.taxi/joanakuehl.com" method="POST">
+      <label for="name">Name (freiwillig)</label>
+      <input type="text" id="name" name="name" />
 
-  <form action="https://form.taxi/joanakuehl" method="POST">
-    <label for="name">Name der buchenden Person:</label>
-    <input type="text" name="name" id="name" required />
+      <label for="email">E-Mail-Adresse (Pflichtfeld)</label>
+      <input type="email" id="email" name="email" required />
 
-    <label for="email">E-Mail-Adresse:</label>
-    <input type="email" name="email" id="email" required />
+      <label>
+        <input type="checkbox" name="zustimmung" required />
+        Ich habe die Hinweise zur Beratung gelesen und stimme zu, dass es sich nicht um eine kassenärztliche Psychotherapie handelt. Meine Daten dürfen zum Zweck der Terminbuchung verarbeitet werden.
+      </label>
 
-    <label>
-      <input type="checkbox" name="einverstaendnis" required />
-      Ich stimme der psychologischen Beratung unter den genannten Bedingungen zu.
-    </label>
-
-    <label>
-      <input type="checkbox" name="datenschutz" required />
-      Ich stimme der Verarbeitung meiner Daten gemäß DSGVO zu.
-    </label>
-
-    <button type="submit">Absenden</button>
-  </form>
-</body>
+      <button type="submit">Absenden</button>
+    </form>
+  </body>
 </html>
