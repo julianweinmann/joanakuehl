@@ -1,0 +1,46 @@
+<!-- NAVIGATION BAR -->
+<nav id="navbar" class="nav-sticky nav-font">
+    <div class="container mx-auto px-6">
+        <div class="flex justify-between items-center py-4">
+            <a href="/" class="text-lg font-semibold text-warm-grey" style="color: #4a4a4a;">Joana Kühl</a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="/#ueber-mich" class="text-gray-600 hover:text-accent-orange transition-colors">Über Mich</a>
+                <a href="/#angebot" class="text-gray-600 hover:text-accent-orange transition-colors">Angebot</a>
+                <a href="/konditionen/" class="text-gray-600 hover:text-accent-orange transition-colors">Konditionen</a>
+                <a href="/einverstaendniserklaerung/" class="text-gray-600 hover:text-accent-orange transition-colors">Einverständniserklärung</a>
+            </div>
+            <div class="hidden md:block">
+                <a href="/termin/" class="bg-accent-orange text-white font-semibold py-2 px-6 rounded-full shadow-soft hover:bg-accent-orange-dark transition-colors duration-300">Termin buchen</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white/80 backdrop-blur-lg rounded-b-lg shadow-md">
+        <a href="/#ueber-mich" class="block py-3 px-6 text-sm hover:bg-gray-200">Über Mich</a>
+        <a href="/#angebot" class="block py-3 px-6 text-sm hover:bg-gray-200">Angebot</a>
+        <a href="/konditionen/" class="block py-3 px-6 text-sm hover:bg-gray-200">Konditionen</a>
+        <a href="/einverstaendniserklaerung/" class="block py-3 px-6 text-sm hover:bg-gray-200">Einverständniserklärung</a>
+        <div class="p-4">
+            <a href="/termin/" class="block text-center w-full bg-accent-orange text-white font-semibold py-3 px-6 rounded-full shadow-soft hover:bg-accent-orange-dark transition-colors duration-300">Termin buchen</a>
+        </div>
+    </div>
+</nav>
+
+<script>
+    // This script makes the mobile menu work.
+    // It needs to be in the header to be available when the button is clicked.
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    });
+</script>
