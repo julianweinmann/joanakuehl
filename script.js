@@ -28,31 +28,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const initializeHeaderScripts = () => {
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        const nav = document.getElementById('navbar');
 
         // Mobile menu toggle
         if (menuBtn && mobileMenu) {
             menuBtn.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
-            });
-        }
-
-        // Sticky navigation bar style change on scroll
-        if (nav) {
-            // For subpages, the nav should always have the scrolled style from the start
-            if (window.location.pathname !== '/') {
-                 nav.classList.add('nav-scrolled');
-            }
-            
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    nav.classList.add('nav-scrolled');
-                } else {
-                    // Only remove the scrolled style if on the homepage
-                    if (window.location.pathname === '/') {
-                       nav.classList.remove('nav-scrolled');
-                    }
-                }
             });
         }
     };
