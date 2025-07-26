@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Konditionen - Joana Kühl</title>
+    <title>Impressum - Joana Kühl</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #FAF9F7; color: #5C5C5C; }
-        h1, h2, h3, .nav-font { font-family: 'Montserrat', sans-serif; }
+        h1, h2, .nav-font { font-family: 'Montserrat', sans-serif; }
         .text-accent-orange { color: #F29979; }
         .bg-accent-orange { background-color: #F29979; }
         .hover\:bg-accent-orange-dark:hover { background-color: #e68a68; }
@@ -19,6 +19,7 @@
         .nav-sticky { position: sticky; top: 0; z-index: 50; transition: background-color 0.3s, box-shadow 0.3s; }
         .nav-scrolled { background-color: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
         .content-box h2 { font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; color: #4a4a4a; }
+        .content-box a { color: #F29979; text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -31,8 +32,8 @@
                 <div class="hidden md:flex items-center space-x-6">
                     <a href="/#ueber-mich" class="text-gray-600 hover:text-accent-orange transition-colors">Über Mich</a>
                     <a href="/#angebot" class="text-gray-600 hover:text-accent-orange transition-colors">Angebot</a>
-                    <a href="/konditionen/" class="font-semibold text-accent-orange">Konditionen</a>
-                    <a href="/einverstaendniserklaerung/" class="text-gray-600 hover:text-accent-orange transition-colors">Einverständnis</a>
+                    <a href="/konditionen/" class="text-gray-600 hover:text-accent-orange transition-colors">Konditionen</a>
+                    <a href="/einverstaendniserklaerung/" class="text-gray-600 hover:text-accent-orange transition-colors">Einverständniserklärung</a>
                 </div>
                 <div class="hidden md:block">
                     <a href="/termin/" class="bg-accent-orange text-white font-semibold py-2 px-6 rounded-full shadow-soft hover:bg-accent-orange-dark transition-colors duration-300">Termin buchen</a>
@@ -45,37 +46,41 @@
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden">
-            <a href="/#ueber-mich" class="block py-2 px-6 text-sm hover:bg-gray-200">Über Mich</a>
-            <a href="/#angebot" class="block py-2 px-6 text-sm hover:bg-gray-200">Angebot</a>
-            <a href="/konditionen/" class="block py-2 px-6 text-sm font-semibold text-accent-orange bg-gray-100">Konditionen</a>
-            <a href="/einverstaendniserklaerung/" class="block py-2 px-6 text-sm hover:bg-gray-200">Einverständnis</a>
-            <a href="/termin/" class="block py-2 px-6 text-sm hover:bg-gray-200">Termin buchen</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white/80 backdrop-blur-lg rounded-b-lg shadow-md">
+            <a href="/#ueber-mich" class="block py-3 px-6 text-sm hover:bg-gray-200">Über Mich</a>
+            <a href="/#angebot" class="block py-3 px-6 text-sm hover:bg-gray-200">Angebot</a>
+            <a href="/konditionen/" class="block py-3 px-6 text-sm hover:bg-gray-200">Konditionen</a>
+            <a href="/einverstaendniserklaerung/" class="block py-3 px-6 text-sm hover:bg-gray-200">Einverständniserklärung</a>
+            <div class="p-4">
+                <a href="/termin/" class="block text-center w-full bg-accent-orange text-white font-semibold py-3 px-6 rounded-full shadow-soft hover:bg-accent-orange-dark transition-colors duration-300">Termin buchen</a>
+            </div>
         </div>
     </nav>
 
     <!-- MAIN CONTENT -->
     <main>
         <div class="container mx-auto px-6 py-16 md:py-24 max-w-3xl">
-            <h1 class="text-4xl md:text-5xl font-semibold text-warm-grey mb-8 text-center" style="color: #4a4a4a;">Konditionen & Preise</h1>
-            <div class="space-y-8 text-lg leading-relaxed">
-                <div class="bg-white p-8 rounded-2xl shadow-soft">
-                    <h2 class="text-2xl font-semibold mb-4">Honorar</h2>
-                    <p class="mb-4">Die Kosten für psychologische Beratung und Therapie werden in der Regel nicht von den gesetzlichen Krankenkassen übernommen. Als Selbstzahler genießen Sie jedoch einige Vorteile, wie z.B. schnelle Terminvergabe ohne lange Wartezeiten und maximale Diskretion, da keine Diagnosen an die Krankenkasse übermittelt werden.</p>
-                    <ul class="list-disc list-inside space-y-2 mb-4">
-                        <li><strong>Einzeltherapie (50 Minuten):</strong> 80 €</li>
-                        <li><strong>Doppelstunde (100 Minuten):</strong> 160 €</li>
-                    </ul>
-                    <p>Bei niedrigem Einkommen sind ermäßigte Sätze nach Absprache möglich. Sprechen Sie mich hierzu gerne an.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-soft">
-                    <h2 class="text-2xl font-semibold mb-4">Abrechnung & Kostenübernahme</h2>
-                    <p class="mb-4">Das Honorar wird privat in Rechnung gestellt. Sie erhalten im Anschluss an die Sitzung eine Rechnung per E-Mail. Bitte erkundigen Sie sich bei Ihrer privaten Krankenversicherung oder Zusatzversicherung, ob und in welchem Umfang eine Kostenübernahme für psychotherapeutische Leistungen nach dem Heilpraktikergesetz (HeilprG) möglich ist.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-soft">
-                    <h2 class="text-2xl font-semibold mb-4">Terminabsagen</h2>
-                    <p>Sollten Sie einen vereinbarten Termin nicht wahrnehmen können, bitte ich Sie, diesen bis spätestens 24 Stunden vorher abzusagen. Bei kurzfristigeren Absagen oder Nichterscheinen wird das volle Honorar als Ausfallhonorar berechnet, da der Termin exklusiv für Sie reserviert war.</p>
-                </div>
+            <h1 class="text-4xl md:text-5xl font-semibold text-warm-grey mb-8 text-center" style="color: #4a4a4a;">Impressum</h1>
+            <div class="bg-white p-8 md:p-12 rounded-2xl shadow-soft content-box text-base leading-relaxed">
+                <h2>Angaben gemäß § 5 TMG</h2>
+                <p>Joana Kühl<br>
+                    c/o Julian Weinmann<br>
+                    Willibald-Alexis-Straße 3<br>
+                    10965 Berlin<br>
+                    Deutschland</p>
+                
+                <h2>Kontakt</h2>
+                <p>E-Mail: <a href="mailto:info@joanakuehl.com">info@joanakuehl.com</a></p>
+                
+                <h2>Tätigkeit</h2>
+                <p>Psychologische Beratung im Rahmen der Ausbildung zur Psychotherapeutin<br>
+                Ausbildungsinstitut: ISTB – Institut für Systemische Therapie und Beratung</p>
+                
+                <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+                <p>Joana Kühl</p>
+
+                <p class="mt-8">Keine Umsatzsteuer-ID vorhanden.<br>
+                Anwendung der Kleinunternehmerregelung gemäß § 19 UStG.</p>
             </div>
         </div>
     </main>
@@ -93,7 +98,7 @@
             </div>
         </div>
     </footer>
-    
+
     <script>
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
