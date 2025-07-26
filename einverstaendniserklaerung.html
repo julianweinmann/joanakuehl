@@ -20,8 +20,7 @@
         margin-top: 1em;
       }
       input[type="text"],
-      input[type="email"],
-      textarea {
+      input[type="email"] {
         width: 100%;
         padding: 8px;
         font-size: 1em;
@@ -41,15 +40,19 @@
       button:hover {
         background-color: #006666;
       }
-      a {
-        color: #008080;
-        text-decoration: underline;
-      }
       footer {
-        margin-top: 3em;
-        font-size: 0.9em;
+        margin-top: 60px;
         text-align: center;
-        color: #555;
+        font-size: 0.9em;
+        color: #777;
+      }
+      footer a {
+        color: #777;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+      footer a:hover {
+        text-decoration: underline;
       }
     </style>
   </head>
@@ -62,7 +65,10 @@
 
     <p>
       Das Honorar beträgt <strong>80 € pro 50 Minuten</strong>. Die Abrechnung erfolgt direkt mit Ihnen – Sie erhalten im Anschluss eine <strong>Rechnung per E-Mail</strong>.
-      Bei niedrigem Einkommen sind <strong>ermäßigte Sätze nach Absprache</strong> möglich.
+    </p>
+
+    <p>
+      Bei niedrigem Einkommen sind ermäßigte Sätze nach Absprache möglich.
     </p>
 
     <form action="https://form.taxi/s/91u7s0gv" method="POST">
@@ -77,13 +83,18 @@
       <label for="email">E-Mail-Adresse (Pflichtfeld)</label>
       <input type="email" id="email" name="email" required />
 
-      <label for="adresse">Adresse (Pflichtfeld – für die Rechnung)</label>
-      <input type="text" id="adresse" name="adresse" required />
+      <label for="strasse">Straße und Hausnummer (Pflichtfeld)</label>
+      <input type="text" id="strasse" name="strasse" required />
+
+      <label for="plz">PLZ (Pflichtfeld)</label>
+      <input type="text" id="plz" name="plz" required />
+
+      <label for="ort">Ort (Pflichtfeld)</label>
+      <input type="text" id="ort" name="ort" required />
 
       <label>
         <input type="checkbox" name="zustimmung" required />
-        Ich habe die <a href="https://joanakuehl.com/hinweise" target="_blank">Hinweise zur Beratung</a> gelesen und stimme zu,
-        dass es sich nicht um eine kassenärztliche Psychotherapie handelt.
+        Ich habe die Hinweise zur Beratung gelesen und stimme zu, dass es sich nicht um eine kassenärztliche Psychotherapie handelt.
         Meine Daten dürfen zum Zweck der Terminbuchung und Rechnungsstellung verarbeitet werden.
       </label>
 
@@ -91,10 +102,8 @@
     </form>
 
     <footer>
-      <p>
-        <a href="https://joanakuehl.com/impressum">Impressum</a> · 
-        <a href="https://joanakuehl.com/datenschutz">Datenschutzerklärung</a>
-      </p>
+      <a href="https://joanakuehl.com/datenschutz">Datenschutz</a> ·
+      <a href="https://joanakuehl.com/impressum">Impressum</a>
     </footer>
   </body>
 </html>
