@@ -3,25 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Konditionen - Joana Kühl</title>
+    <title>Konditionen - Psychologische Beratung Joana Kühl</title>
+    <meta name="description" content="Transparente Informationen zu den Konditionen, Preisen und dem Honorar für psychologische Beratung und Einzeltherapie bei Joana Kühl in Berlin.">
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4CPETEVFE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-Z4CPETEVFE');
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: #FAF9F7; 
-            color: #5C5C5C; 
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #FAF9F7; color: #5C5C5C; }
         h1, h2, h3, .nav-font { font-family: 'Montserrat', sans-serif; }
         .content-box h2 { font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; color: #4a4a4a; }
+        .shadow-soft { box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); }
         
-        .nav-sticky { 
-            position: sticky; 
-            top: 0; 
-            z-index: 50; 
+        .hero-background {
+            background-image: url('/hero-mobile.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
+        @media (min-width: 768px) {
+            .hero-background {
+                background-image: url('/image_c24324.png');
+            }
+        }
+
+        .nav-sticky { position: sticky; top: 0; z-index: 50; }
         .nav-scrolled {
             background-color: rgba(255, 255, 255, 0.9); 
             backdrop-filter: blur(10px); 
@@ -33,33 +51,33 @@
 
     <div id="header-placeholder"></div>
 
-    <!-- MAIN CONTENT -->
     <main>
-        <div class="container mx-auto px-6 py-16 md:py-24 max-w-3xl">
-            <h1 class="text-4xl md:text-5xl font-semibold text-warm-grey mb-8 text-center" style="color: #4a4a4a;">Konditionen</h1>
-            <div class="space-y-8 text-lg leading-relaxed">
-                <div class="bg-white p-8 rounded-2xl shadow-soft">
-                    <h2 class="text-2xl font-semibold mb-4">Honorar</h2>
-                    <ul class="list-disc list-inside space-y-2 mb-4">
-                        <li><strong>Einzeltherapie (50 Minuten):</strong> 80 €</li>
-                        <li><strong>Doppelstunde (100 Minuten):</strong> 160 €</li>
-                    </ul>
-                    <p>Bei niedrigem Einkommen sind ermäßigte Sätze nach Absprache möglich. Sprechen Sie mich hierzu gerne an.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-soft">
-                    <h2 class="text-2xl font-semibold mb-4">Abrechnung & Kostenübernahme</h2>
-                    <p>Das Honorar wird privat in Rechnung gestellt. Sie erhalten im Anschluss an die Sitzung eine Rechnung per E-Mail. Als Selbstzahler genießen Sie Vorteile wie schnelle Terminvergabe und maximale Diskretion.</p>
-                </div>
-                
-                <div class="bg-white p-8 rounded-2xl shadow-soft">
-                    <h2 class="text-2xl font-semibold mb-4">Wichtige Hinweise zur Beratung</h2>
-                    <ul class="list-disc list-inside space-y-3 text-base">
-                        <li>Die Beratung erfolgt im Rahmen einer psychologischen Begleitung und ersetzt keine medizinisch oder therapeutisch notwendige Behandlung. Es handelt sich nicht um eine Psychotherapie im Sinne des Psychotherapeutengesetzes (PTG).</li>
-                        <li>Die Teilnahme erfolgt freiwillig und in eigener Verantwortung.</li>
-                        <li>Alle Inhalte der Sitzungen unterliegen der gesetzlichen Schweigepflicht.</li>
-                        <li>Sollten Sie einen Termin nicht wahrnehmen können, bitte ich Sie, diesen bis spätestens 24 Stunden vorher abzusagen. Bei kurzfristigeren Absagen oder Nichterscheinen wird das volle Ausfallhonorar berechnet.</li>
-                        <li>Bei akuten Krisen wenden Sie sich bitte an den ärztlichen Notdienst (Tel: 116 117), den Berliner Krisendienst oder psychiatrische Notaufnahmen.</li>
-                    </ul>
+        <div class="hero-background">
+            <div class="container mx-auto px-6 py-16 md:py-24 max-w-3xl">
+                <h1 class="text-4xl md:text-5xl font-semibold text-gray-800 mb-12 text-center">Konditionen</h1>
+                <div class="space-y-8 text-lg leading-relaxed bg-white/80 backdrop-blur-sm p-8 md:p-12 rounded-2xl shadow-soft">
+                    <div>
+                        <h2 class="text-2xl font-semibold mb-4">Honorar</h2>
+                        <ul class="list-disc list-inside space-y-2 mb-4">
+                            <li><strong>Einzeltherapie (50 Minuten):</strong> 80 €</li>
+                            <li><strong>Doppelstunde (100 Minuten):</strong> 160 €</li>
+                        </ul>
+                        <p>Bei niedrigem Einkommen sind ermäßigte Sätze nach Absprache möglich. Sprechen Sie mich hierzu gerne an.</p>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-semibold mb-4">Abrechnung & Kostenübernahme</h2>
+                        <p>Das Honorar wird privat in Rechnung gestellt. Sie erhalten im Anschluss an die Sitzung eine Rechnung per E-Mail. Als Selbstzahler genießen Sie Vorteile wie schnelle Terminvergabe und maximale Diskretion.</p>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-semibold mb-4">Wichtige Hinweise zur Beratung</h2>
+                        <ul class="list-disc list-inside space-y-3 text-base">
+                            <li>Die Beratung erfolgt im Rahmen einer psychologischen Begleitung und ersetzt keine medizinisch oder therapeutisch notwendige Behandlung. Es handelt sich nicht um eine Psychotherapie im Sinne des Psychotherapeutengesetzes (PTG).</li>
+                            <li>Die Teilnahme erfolgt freiwillig und in eigener Verantwortung.</li>
+                            <li>Alle Inhalte der Sitzungen unterliegen der gesetzlichen Schweigepflicht.</li>
+                            <li>Sollten Sie einen Termin nicht wahrnehmen können, bitte ich Sie, diesen bis spätestens 24 Stunden vorher abzusagen. Bei kurzfristigeren Absagen oder Nichterscheinen wird das volle Ausfallhonorar berechnet.</li>
+                            <li>Bei akuten Krisen wenden Sie sich bitte an den ärztlichen Notdienst (Tel: 116 117), den Berliner Krisendienst oder psychiatrische Notaufnahmen.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
