@@ -9,7 +9,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #FAF9F7; color: #5C5C5C; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #FAF9F7; 
+            color: #5C5C5C; 
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+            margin: 0;
+        }
         h1, h2, h3, .nav-font { font-family: 'Montserrat', sans-serif; }
         .bg-cloudy-mint { background-color: #D9ECE6; }
         .bg-light-beige { background-color: #FAF9F7; }
@@ -22,20 +30,18 @@
         section { padding: 4rem 1rem; }
         @media (min-width: 768px) { section { padding: 6rem 2rem; } }
         
-        /* Responsive Hero Background */
         .hero-background {
-            background-image: url('/hero-mobile.png'); /* Mobile-first image */
+            background-image: url('/hero-mobile.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
         @media (min-width: 768px) {
             .hero-background {
-                background-image: url('/image_c24324.png'); /* Desktop image */
+                background-image: url('/image_c24324.png');
             }
         }
 
-        /* This class is targeted by the script.js to make the header sticky */
         .nav-sticky { 
             position: sticky; 
             top: 0; 
@@ -48,23 +54,22 @@
         }
     </style>
 </head>
-<body class="scroll-smooth">
+<body>
 
     <div id="header-placeholder"></div>
 
-    <!-- HERO SECTION -->
-    <header id="home" class="hero-background">
-        <div class="container mx-auto px-6 pt-20 pb-32 md:pt-20 md:pb-40 text-center flex flex-col items-center justify-center h-screen min-h-[700px]">
-            <h1 class="text-4xl md:text-6xl font-semibold text-warm-grey mb-4" style="color: #4a4a4a;">Joana Kühl</h1>
-            <h2 class="text-2xl md:text-3xl text-warm-grey mb-6" style="color: #5C5C5C;">Systemische Psychotherapie</h2>
-            <p class="text-lg md:text-xl text-warm-grey max-w-2xl mx-auto mb-8 mt-4">
-                Psychotherapeutin i.A. · Expertin für Hochsensibilität · Online- und Präsenztermine
-            </p>
-        </div>
-    </header>
-
+    <!-- MAIN CONTENT -->
     <main>
-        <!-- ÜBER MICH SECTION -->
+        <header id="home" class="hero-background">
+            <div class="container mx-auto px-6 pt-20 pb-32 md:pt-20 md:pb-40 text-center flex flex-col items-center justify-center h-screen min-h-[700px]">
+                <h1 class="text-4xl md:text-6xl font-semibold text-warm-grey mb-4" style="color: #4a4a4a;">Joana Kühl</h1>
+                <h2 class="text-2xl md:text-3xl text-warm-grey mb-6" style="color: #5C5C5C;">Systemische Psychotherapie</h2>
+                <p class="text-lg md:text-xl text-warm-grey max-w-2xl mx-auto mb-8 mt-4">
+                    Psychotherapeutin i.A. · Expertin für Hochsensibilität · Online- und Präsenztermine
+                </p>
+            </div>
+        </header>
+
         <section id="ueber-mich" class="bg-light-beige">
             <div class="container mx-auto px-6 max-w-4xl">
                 <div class="md:flex md:items-center md:space-x-12">
@@ -85,7 +90,6 @@
                 </div>
             </div>
         </section>
-        <!-- ANGEBOT SECTION -->
         <section id="angebot" class="bg-cloudy-mint">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl md:text-4xl font-medium text-warm-grey mb-12 text-center">Mein Angebot</h2>
