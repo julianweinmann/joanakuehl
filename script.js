@@ -2,20 +2,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const headerPlaceholder = document.getElementById('header-placeholder');
     const footerPlaceholder = document.getElementById('footer-placeholder');
 
-    // Function to fetch and insert HTML components
     const loadComponent = (url, placeholder) => {
         if (placeholder) {
             fetch(url)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`Could not load ${url}: ${response.statusText}`);
-                    }
-                    return response.text();
-                })
+                .then(response => response.ok ? response.text() : Promise.reject(`Could not load ${url}`))
                 .then(data => {
                     placeholder.innerHTML = data;
-                    
-                    // After loading the header, initialize its interactive elements
                     if (placeholder.id === 'header-placeholder') {
                         initializeHeaderScripts();
                     }
@@ -24,20 +16,41 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    // Function to handle scripts within the loaded header
     const initializeHeaderScripts = () => {
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
+        const nav = document.getElementById('navbar');
 
-        // Mobile menu toggle
         if (menuBtn && mobileMenu) {
             menuBtn.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
             });
         }
+
+        if (nav) {
+            nav.classList.add('nav-sticky');
+
+            const handleScroll = () => {
+                // This function adds the white background on scroll for the homepage
+                if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+                    if (window.scrollY > 50) {
+                        nav.classList.add('nav-scrolled');
+                    } else {
+                        nav.classList.remove('nav-scrolled');
+                    }
+                }
+            };
+            
+            // For all subpages, the header should be white from the start
+            if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+                nav.classList.add('nav-scrolled');
+            }
+
+            window.addEventListener('scroll', handleScroll);
+            handleScroll(); // Run on load
+        }
     };
 
-    // Load header and footer into their placeholders
     loadComponent('/header.html', headerPlaceholder);
     loadComponent('/footer.html', footerPlaceholder);
 });
