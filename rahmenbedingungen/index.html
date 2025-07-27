@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rahmenbedingungen - Joana Kühl</title>
+    <title>Rahmen-Bedingungen - Joana Kühl</title>
     <meta name="description" content="Transparente Informationen zu den Rahmenbedingungen, Preisen und dem Honorar für psychologische Beratung bei Joana Kühl in Berlin.">
     <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -18,7 +18,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #FAF9F7; color: #5C5C5C; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #FAF9F7; 
+            color: #5C5C5C;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex-grow: 1;
+        }
         h1, h2, h3, .nav-font { font-family: 'Montserrat', sans-serif; }
         .content-box h2 { font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; color: #4a4a4a; }
         .shadow-soft { box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); }
@@ -26,15 +36,14 @@
         .nav-scrolled { background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
     </style>
 </head>
-<body class="flex flex-col min-h-screen">
+<body>
 
     <div id="header-placeholder"></div>
 
-    <main class="flex-grow">
+    <main>
         <div class="container mx-auto px-6 py-16 md:py-24 max-w-3xl">
             <h1 class="text-4xl md:text-5xl font-semibold text-warm-grey mb-4 text-center" style="color: #4a4a4a;">
-                <span class="md:hidden">Rahmen-<br>Bedingungen</span>
-                <span class="hidden md:inline">Rahmenbedingungen</span>
+                Rahmen-Bedingungen
             </h1>
             <p class="text-lg text-center text-gray-600 mb-12">Schön, dass Du da bist. Damit wir uns ganz auf unsere gemeinsame Arbeit konzentrieren können, findest Du hier die wichtigsten Punkte für unsere Zusammenarbeit.</p>
             <div class="space-y-8 text-base leading-relaxed">
