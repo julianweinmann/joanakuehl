@@ -9,24 +9,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        /* Updated body layout to support sticky header */
         body { 
             font-family: 'Inter', sans-serif; 
             background-color: #FAF9F7; 
             color: #5C5C5C; 
-            display: grid;
-            grid-template-rows: auto 1fr auto; /* Header, Main, Footer */
-            min-height: 100vh; 
-            margin: 0;
         }
         h1, h2, .nav-font { font-family: 'Montserrat', sans-serif; }
-        
-        /* Consistent styling classes */
-        .bg-accent-orange { background-color: #F29979; }
-        .hover\:bg-accent-orange-dark:hover { background-color: #e68a68; }
-        .shadow-soft { box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); }
+        main { flex-grow: 1; }
 
-        /* These classes are added by script.js to the nav element */
         .nav-sticky { 
             position: sticky; 
             top: 0; 
@@ -39,7 +29,7 @@
         }
     </style>
 </head>
-<body>
+<body class="flex flex-col min-h-screen">
 
     <div id="header-placeholder"></div>
 
