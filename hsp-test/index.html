@@ -6,12 +6,33 @@
     <title>HSP Selbsttest - Joana Kühl</title>
     <meta name="description" content="Finde mit dem wissenschaftlich fundierten Selbsttest heraus, ob du oder dein Kind hochsensibel (HSP) ist. Ein erster Schritt zu mehr Verständnis.">
     <link rel="icon" type="image/png" href="/favicon.png">
-    <!-- Google Analytics, Fonts, etc. -->
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4CPETEVFE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-Z4CPETEVFE');
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #FAF9F7; color: #5C5C5C; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #FAF9F7; 
+            color: #5C5C5C;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex-grow: 1;
+        }
         h1, h2, h3, .nav-font { font-family: 'Montserrat', sans-serif; }
+        .bg-cloudy-mint { background-color: #D9ECE6; }
         .bg-accent-orange { background-color: #F29979; }
         .hover\:bg-accent-orange-dark:hover { background-color: #e68a68; }
         .shadow-soft { box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); }
@@ -21,28 +42,19 @@
 </head>
 <body>
     <div id="header-placeholder"></div>
-    <main>
-        <div class="bg-cloudy-mint">
+    <main class="flex items-center justify-center">
+        <div class="bg-cloudy-mint w-full">
             <div class="container mx-auto px-4 py-16 md:py-24 text-center">
                 <h1 class="text-4xl md:text-5xl font-semibold text-gray-800 mb-4">HSP-Selbsttest</h1>
-                <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-12">Dieser Test basiert auf den Forschungen von Dr. Elaine Aron und kann dir eine erste Orientierung geben. Wähle, für wen du den Test machen möchtest.</p>
+                <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-12">Dieser Test basiert auf den Forschungen von Dr. Elaine Aron und kann dir eine erste Orientierung geben, ob du oder dein Kind hochsensibel ist.</p>
                 
-                <div class="flex flex-col md:flex-row gap-8 justify-center">
-                    <!-- Card Erwachsene -->
-                    <div class="bg-white p-8 rounded-2xl shadow-soft text-center flex-1">
-                        <h2 class="text-2xl font-semibold mb-4 text-gray-800">Für mich selbst</h2>
-                        <p class="mb-6">Finde heraus, wie ausgeprägt deine eigene Sensibilität ist und erhalte wertvolle Einblicke.</p>
-                        <a href="DEINE_TALLY_URL_ERWACHSENE" class="inline-block bg-accent-orange text-white font-semibold py-3 px-8 rounded-full shadow-soft hover:bg-accent-orange-dark transition-colors duration-300">Test starten</a>
-                    </div>
-                    
-                    <!-- Card Kind -->
-                    <div class="bg-white p-8 rounded-2xl shadow-soft text-center flex-1">
-                        <h2 class="text-2xl font-semibold mb-4 text-gray-800">Für mein Kind</h2>
-                        <p class="mb-6">Beantworte die Fragen aus deiner Sicht als Elternteil, um die Sensibilität deines Kindes besser zu verstehen.</p>
-                        <a href="DEINE_TALLY_URL_KIND" class="inline-block bg-accent-orange text-white font-semibold py-3 px-8 rounded-full shadow-soft hover:bg-accent-orange-dark transition-colors duration-300">Test starten</a>
-                    </div>
+                <div class="bg-white p-8 rounded-2xl shadow-soft max-w-lg mx-auto">
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-800">Test für Erwachsene & Kinder</h2>
+                    <p class="mb-6">Im ersten Schritt des Tests wählst du, für wen du die Fragen beantworten möchtest.</p>
+                    <a href="https://tally.so/r/w4Vjg5" target="_blank" class="inline-block bg-accent-orange text-white font-semibold py-3 px-8 rounded-full shadow-soft hover:bg-accent-orange-dark transition-colors duration-300">Test starten</a>
                 </div>
-                 <p class="text-sm text-gray-600 mt-12 max-w-2xl mx-auto"><strong>Hinweis:</strong> Dieser Test dient nur der ersten Orientierung und ersetzt keine professionelle psychologische Diagnostik.</p>
+
+                <p class="text-sm text-gray-600 mt-12 max-w-2xl mx-auto"><strong>Hinweis:</strong> Dieser Test dient nur der ersten Orientierung und ersetzt keine professionelle psychologische Diagnostik.</p>
             </div>
         </div>
     </main>
