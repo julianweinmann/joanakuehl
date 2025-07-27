@@ -13,8 +13,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
-      gtag('config', 'G-Z4CPETEVFE');
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -34,7 +32,10 @@
 
     <main class="flex-grow">
         <div class="container mx-auto px-6 py-16 md:py-24 max-w-3xl">
-            <h1 class="text-4xl md:text-5xl font-semibold text-warm-grey mb-4 text-center" style="color: #4a4a4a;">Rahmenbedingungen</h1>
+            <h1 class="text-4xl md:text-5xl font-semibold text-warm-grey mb-4 text-center" style="color: #4a4a4a;">
+                <span class="md:hidden">Rahmen-<br>Bedingungen</span>
+                <span class="hidden md:inline">Rahmenbedingungen</span>
+            </h1>
             <p class="text-lg text-center text-gray-600 mb-12">Schön, dass Du da bist. Damit wir uns ganz auf unsere gemeinsame Arbeit konzentrieren können, findest Du hier die wichtigsten Punkte für unsere Zusammenarbeit.</p>
             <div class="space-y-8 text-base leading-relaxed">
                 <div class="bg-white p-8 rounded-2xl shadow-soft">
@@ -57,6 +58,7 @@
     </main>
 
     <div id="footer-placeholder"></div>
+    <div id="cookie-banner-placeholder"></div>
     
     <script src="/script.js"></script>
 
