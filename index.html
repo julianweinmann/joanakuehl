@@ -46,53 +46,61 @@
             backdrop-filter: blur(10px); 
             box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
         }
+        .bg-accent-orange { background-color: #F29979; }
+        .hover\:bg-accent-orange-dark:hover { background-color: #e68a68; }
+        .text-accent-orange { color: #F29979; }
     </style>
 </head>
-<body>
+<body class="flex flex-col min-h-screen">
 
     <div id="header-placeholder"></div>
 
-    <main>
+    <main class="flex-grow">
         <div class="hero-background">
             <div class="container mx-auto px-4 py-16 md:py-24 max-w-3xl">
                 <h1 class="text-4xl md:text-5xl font-semibold text-gray-800 mb-8 text-center">Startformular</h1>
                 <div class="bg-white/80 backdrop-blur-sm p-6 md:p-12 rounded-2xl shadow-soft text-base leading-relaxed">
-                    <p class="mb-4">Diese psychologische Beratung ist ein kostenpflichtiges Angebot. Es handelt sich nicht um eine kassenärztlich finanzierte Psychotherapie.</p>
-                    <p class="mb-4">Das Honorar beträgt <strong>80 € pro 50 Minuten</strong>. Die Abrechnung erfolgt direkt mit dir – du erhältst im Anschluss eine <strong>Rechnung per E-Mail</strong>.</p>
-                    <p class="mb-8">Bei niedrigem Einkommen sind ermäßigte Sätze nach Absprache möglich.</p>
+                    <div class="text-center mb-8 space-y-4">
+                        <p>Vielen Dank für Dein Vertrauen. Bitte fülle dieses Formular vor unserem ersten Gespräch aus, damit wir uns dann voll und ganz auf Dich und Dein Anliegen konzentrieren können.</p>
+                        <p>Die Beratung ist eine Privatleistung (keine Kassenleistung) und das Honorar beträgt 80 € pro 50 Minuten. Bei niedrigem Einkommen sprich mich gerne auf ermäßigte Sätze an.</p>
+                    </div>
+                    
+                    <hr class="my-8 border-gray-200">
+
+                    <h2 class="text-2xl font-semibold text-gray-700 text-center mb-6">Einverständniserklärung</h2>
 
                     <form action="https://form.taxi/s/91u7s0gv" method="POST" class="space-y-6">
                         <input type="hidden" name="_redirect" value="https://joanakuehl.com/danke" />
                         <div>
-                            <label for="vorname" class="block mb-2 text-sm font-medium">Vorname (Pflichtfeld)</label>
+                            <label for="vorname" class="block mb-2 text-sm font-medium">Vorname</label>
                             <input type="text" id="vorname" name="vorname" class="form-input" required />
                         </div>
                         <div>
-                            <label for="nachname" class="block mb-2 text-sm font-medium">Nachname (Pflichtfeld)</label>
+                            <label for="nachname" class="block mb-2 text-sm font-medium">Nachname</label>
                             <input type="text" id="nachname" name="nachname" class="form-input" required />
                         </div>
                         <div>
-                            <label for="email" class="block mb-2 text-sm font-medium">E-Mail-Adresse (Pflichtfeld)</label>
+                            <label for="email" class="block mb-2 text-sm font-medium">E-Mail-Adresse</label>
                             <input type="email" id="email" name="email" class="form-input" required />
                         </div>
                         <div>
-                            <label for="strasse" class="block mb-2 text-sm font-medium">Straße und Hausnummer (Pflichtfeld)</label>
+                            <label for="strasse" class="block mb-2 text-sm font-medium">Straße und Hausnummer</label>
                             <input type="text" id="strasse" name="strasse" class="form-input" required />
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div class="md:col-span-1">
-                                <label for="plz" class="block mb-2 text-sm font-medium">PLZ (Pflichtfeld)</label>
+                                <label for="plz" class="block mb-2 text-sm font-medium">PLZ</label>
                                 <input type="text" id="plz" name="plz" class="form-input" required />
                             </div>
                             <div class="md:col-span-2">
-                                <label for="ort" class="block mb-2 text-sm font-medium">Ort (Pflichtfeld)</label>
+                                <label for="ort" class="block mb-2 text-sm font-medium">Ort</label>
                                 <input type="text" id="ort" name="ort" class="form-input" required />
                             </div>
                         </div>
                         <div class="pt-4">
                             <label class="flex items-start">
                                 <input type="checkbox" name="zustimmung" class="h-5 w-5 mt-1 rounded border-gray-300 text-accent-orange focus:ring-accent-orange" required />
-                                <span class="ml-3 text-sm">Ich habe die <a href="/konditionen/" target="_blank" class="underline hover:text-accent-orange">Konditionen zur Beratung</a> gelesen und stimme zu, dass es sich nicht um eine kassenärztliche Psychotherapie handelt. Meine Daten dürfen zum Zweck der Terminbuchung und Rechnungsstellung verarbeitet werden.</span>
+                                <span class="ml-3 text-sm">Ich habe die <a href="/konditionen/" target="_blank" class="underline hover:text-accent-orange">Rahmenbedingungen</a> gelesen und stimme der Verarbeitung meiner Daten zu.</span>
                             </label>
                         </div>
                         <div class="pt-4">
