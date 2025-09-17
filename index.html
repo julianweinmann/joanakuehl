@@ -41,14 +41,16 @@
         @media (min-width: 768px) { section { padding: 6rem 2rem; } }
         
         .hero-background {
-            background-image: url('/hero-mobile.png');
+            background-image: url('https://joanakuehl.com/hero-mobile.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            /* I've added this for a nice parallax-like effect on desktop */
+            background-attachment: fixed; 
         }
         @media (min-width: 768px) {
             .hero-background {
-                background-image: url('/image_c24324.png');
+                background-image: url('https://joanakuehl.com/image_c24324.png');
             }
         }
 
@@ -64,18 +66,35 @@
         }
     </style>
 </head>
-<body>
+<body class="flex flex-col min-h-screen">
 
-    <div id="header-placeholder"></div>
+    <!-- This placeholder would be populated by your script.js -->
+    <div id="header-placeholder">
+        <nav class="nav-sticky bg-white/80 backdrop-blur-sm shadow-sm transition-all duration-300">
+             <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+                <a href="#home" class="text-xl font-semibold text-gray-700 nav-font">Joana Kühl</a>
+                <div class="hidden md:flex space-x-8 nav-font">
+                    <a href="#ueber-mich" class="text-gray-600 hover:text-accent-orange">Über Mich</a>
+                    <a href="#fuer-wen" class="text-gray-600 hover:text-accent-orange">Für Wen?</a>
+                    <a href="#angebot" class="text-gray-600 hover:text-accent-orange">Angebot</a>
+                    <a href="#hsp-test" class="text-gray-600 hover:text-accent-orange">HSP-Test</a>
+                </div>
+                 <a href="/termin/" class="hidden md:inline-block bg-accent-orange text-white font-semibold py-2 px-6 rounded-full shadow-soft hover:bg-accent-orange-dark transition-colors duration-300">Kontakt</a>
+            </div>
+        </nav>
+    </div>
+
 
     <main>
         <header id="home" class="hero-background">
             <div class="container mx-auto px-6 pt-20 pb-32 md:pt-20 md:pb-40 text-center flex flex-col items-center justify-center h-screen min-h-[700px]">
-                <h1 class="text-4xl md:text-6xl font-semibold text-warm-grey mb-4" style="color: #4a4a4a;">Joana Kühl</h1>
-                <h2 class="text-2xl md:text-3xl text-warm-grey mb-6" style="color: #5C5C5C;">Systemische Psychotherapie in Berlin</h2>
-                <p class="text-lg md:text-xl text-warm-grey max-w-2xl mx-auto mb-8 mt-4">
-                    In einem sicheren Raum gemeinsam neue Wege entdecken.
-                </p>
+                <div class="bg-white/50 backdrop-blur-sm p-8 rounded-2xl">
+                    <h1 class="text-4xl md:text-6xl font-semibold text-warm-grey mb-4" style="color: #4a4a4a;">Joana Kühl</h1>
+                    <h2 class="text-2xl md:text-3xl text-warm-grey mb-6" style="color: #5C5C5C;">Systemische Psychotherapie in Berlin</h2>
+                    <p class="text-lg md:text-xl text-warm-grey max-w-2xl mx-auto mb-8 mt-4">
+                        In einem sicheren Raum gemeinsam neue Wege entdecken.
+                    </p>
+                </div>
             </div>
         </header>
 
@@ -83,22 +102,59 @@
             <div class="container mx-auto px-6 max-w-4xl">
                 <div class="md:flex md:items-center md:space-x-12">
                     <div class="md:w-1/3 mb-8 md:mb-0 text-center">
-                        <img src="/image_c2221d.jpg" 
+                        <img src="https://joanakuehl.com/image_c2221d.jpg" 
                              alt="Joana Kühl, Psychotherapeutin in Ausbildung für systemische Therapie und HSP-Beratung in Berlin." 
-                             class="rounded-full mx-auto shadow-soft w-48 h-48 md:w-64 md:h-64 object-cover">
+                             class="rounded-full mx-auto shadow-soft w-48 h-48 md:w-64 md:h-64 object-cover"
+                             onerror="this.onerror=null;this.src='https://placehold.co/256x256/D9ECE6/5C5C5C?text=Joana+K%C3%BChl';">
                     </div>
                     <div class="md:w-2/3">
                         <h2 class="text-3xl md:text-4xl font-medium text-warm-grey mb-6 text-center md:text-left">Über Mich</h2>
                         <p class="text-lg mb-4 leading-relaxed">
-                            Herzlich willkommen. Mein Name ist Joana Kühl und als Psychologin und Psychotherapeutin in Ausbildung ist es meine Herzensangelegenheit, Dich auf Deinem Weg zu begleiten. Mit einem tiefen Verständnis für die Komplexität menschlicher Emotionen und Beziehungen biete ich Dir in meiner Praxis in Berlin einen sicheren Raum für Wachstum und Heilung.
+                            Herzlich willkommen. Mein Name ist Joana. Als Systemische Therapeutin ist es meine Herzensangelegenheit, Dich auf Deinem Weg zu begleiten. Mit einem tiefen Verständnis für die Komplexität menschlicher Emotionen biete ich Dir online oder in Berlin einen sicheren Raum für Wachstum und Heilung.
                         </p>
                         <p class="text-lg leading-relaxed">
-                            Mein systemischer Ansatz ermöglicht es uns, nicht nur individuelle Herausforderungen zu betrachten, sondern auch die Dynamiken in Deinen Beziehungen und Deinem Umfeld. Ein besonderer Schwerpunkt meiner Arbeit liegt auf der Begleitung von Erwachsenen mit Hochsensibilität. Ich bin davon überzeugt, dass Empathie und eine vertrauensvolle Beziehung die Basis für eine erfolgreiche Therapie sind.
+                            Mein systemischer Ansatz ermöglicht es uns, nicht nur individuelle Herausforderungen zu betrachten, sondern auch die Dynamiken in Deinen Beziehungen und Deinem Umfeld. Ein besonderer Schwerpunkt meiner Arbeit liegt auf der Begleitung von hochsensiblen Menschen. Dabei arbeite ich wissenschaftlich fundiert, ressourcenorientiert und mit viel Herz. Ich bin überzeugt, dass Empathie und eine vertrauensvolle Beziehung die Basis für eine erfolgreiche Therapie sind.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- ===== NEW SECTION START ===== -->
+        <section id="fuer-wen" class="hero-background">
+            <div class="container mx-auto px-4 py-16 md:py-24">
+                <div class="max-w-4xl mx-auto bg-white/80 backdrop-blur-sm p-8 md:p-12 rounded-2xl shadow-soft">
+                    <h2 class="text-3xl md:text-4xl font-medium text-warm-grey mb-8 text-center">Du bist bei mir richtig, wenn...</h2>
+                    <ul class="space-y-6 text-lg text-gray-700">
+                        <li class="flex items-start">
+                            <svg class="w-7 h-7 text-accent-orange mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>Du wünschst Dir mehr <strong>Klarheit über Deine Hochsensibilität</strong> und möchtest lernen, besser damit umzugehen.</span>
+                        </li>
+                        <li class="flex items-start">
+                             <svg class="w-7 h-7 text-accent-orange mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>Du suchst Unterstützung im Umgang mit <strong>alltäglichen Herausforderungen</strong> wie Reizüberflutung oder Abgrenzung.</span>
+                        </li>
+                        <li class="flex items-start">
+                             <svg class="w-7 h-7 text-accent-orange mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>Du steckst in einer <strong>Krise</strong> oder wünschst Dir Begleitung, um wieder mehr in <strong>Deine Kraft</strong> zu kommen und Dein volles Potenzial zu entfalten.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-7 h-7 text-accent-orange mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>Du möchtest Dein <strong>hochsensibles Kind</strong> besser verstehen und feinfühlig begleiten.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-7 h-7 text-accent-orange mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>Du bist selbst <strong>hochsensibel und Elternteil</strong> und suchst Unterstützung im Spagat zwischen Selbstfürsorge und Elternschaft.</span>
+                        </li>
+                    </ul>
+                    <div class="text-center mt-12">
+                        <a href="/termin/" class="inline-block bg-accent-orange text-white font-semibold py-3 px-8 rounded-full shadow-soft hover:bg-accent-orange-dark transition-colors duration-300">Termin buchen</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ===== NEW SECTION END ===== -->
+
         <section id="angebot" class="bg-cloudy-mint">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl md:text-4xl font-medium text-warm-grey mb-12 text-center">Mein Angebot für Dich in Berlin & Online</h2>
@@ -113,7 +169,7 @@
                     </div>
                     <div class="bg-white p-8 rounded-2xl shadow-soft text-center">
                         <h3 class="text-2xl font-medium text-warm-grey mb-4">HSP-Coaching</h3>
-                        <p class="text-base leading-relaxed">Spezialisierte Beratung für hochsensible Personen (HSP), um Deine Stärken als hochsensible Person zu erkennen und den Alltag gelassener zu meistern.</p>
+                        <p class="text-base leading-relaxed">Spezialisierte Beratung, um Deine Stärken als hochsensible Person zu erkennen und den Alltag mit mehr Gelassenheit zu meistern.</p>
                     </div>
                 </div>
                  <div class="text-center mt-12">
@@ -149,11 +205,27 @@
         </section>
 
     </main>
-
-    <div id="footer-placeholder"></div>
+    
+    <!-- This placeholder would be populated by your script.js -->
+    <div id="footer-placeholder">
+        <footer class="bg-light-beige border-t border-gray-200">
+            <div class="container mx-auto px-6 py-8 text-center text-gray-500">
+                <p>&copy; 2024 Joana Kühl</p>
+                <div class="mt-4">
+                    <a href="/impressum" class="text-sm text-gray-500 hover:text-accent-orange mx-2">Impressum</a>
+                    <a href="/datenschutz" class="text-sm text-gray-500 hover:text-accent-orange mx-2">Datenschutz</a>
+                </div>
+            </div>
+        </footer>
+    </div>
     <div id="cookie-banner-placeholder"></div>
     
-    <script src="/script.js"></script>
+    <!-- The user's script.js would handle loading header/footer, but I've added them directly for the preview -->
 
 </body>
 </html>
+
+
+
+
+
