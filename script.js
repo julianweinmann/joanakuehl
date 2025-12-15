@@ -3,6 +3,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const footerPlaceholder = document.getElementById('footer-placeholder');
     const cookiePlaceholder = document.getElementById('cookie-banner-placeholder');
 
+    // 1. DETECT LANGUAGE
+    // Checks if the current URL contains "/en/" to decide which files to load
+    const isEnglish = window.location.pathname.includes('/en/');
+
+    // 2. DEFINE FILE PATHS
+    // If English, load the -en.html versions. Otherwise, load standard German files.
+    const headerFile = isEnglish ? '/header-en.html' : '/header.html';
+    const footerFile = isEnglish ? '/footer-en.html' : '/footer.html';
+    const cookieFile = isEnglish ? '/cookie-banner-en.html' : '/cookie-banner.html';
+
     const loadComponent = (url, placeholder) => {
         if (placeholder) {
             fetch(url)
@@ -29,17 +39,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (nav) {
             nav.classList.add('nav-sticky');
+            
+            // Check if we are on the Home page (German OR English)
+            const isHomePage = window.location.pathname === '/' || 
+                               window.location.pathname === '/index.html' || 
+                               window.location.pathname === '/en/' || 
+                               window.location.pathname === '/en/index.html';
+
             const handleScroll = () => {
-                if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+                // If on homepage, only show white background after scrolling
+                if (isHomePage) {
                     if (window.scrollY > 20) nav.classList.add('nav-scrolled');
                     else nav.classList.remove('nav-scrolled');
                 }
             };
-            if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+
+            // If NOT on homepage, always show white background
+            if (!isHomePage) {
                 nav.classList.add('nav-scrolled');
             }
+
             window.addEventListener('scroll', handleScroll);
-            handleScroll();
+            handleScroll(); // Trigger once on load
         }
     };
 
@@ -57,20 +78,26 @@ document.addEventListener('DOMContentLoaded', function() {
             activateAnalytics();
         }
 
-        acceptBtn.addEventListener('click', () => {
-            setCookie('user_consent', 'granted', 365);
-            banner.classList.add('hidden');
-            activateAnalytics();
-        });
+        if (acceptBtn) {
+            acceptBtn.addEventListener('click', () => {
+                setCookie('user_consent', 'granted', 365);
+                banner.classList.add('hidden');
+                activateAnalytics();
+            });
+        }
 
-        declineBtn.addEventListener('click', () => {
-            setCookie('user_consent', 'denied', 365);
-            banner.classList.add('hidden');
-        });
+        if (declineBtn) {
+            declineBtn.addEventListener('click', () => {
+                setCookie('user_consent', 'denied', 365);
+                banner.classList.add('hidden');
+            });
+        }
         
-        closeBtn.addEventListener('click', () => {
-             banner.classList.add('hidden');
-        });
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                 banner.classList.add('hidden');
+            });
+        }
     };
 
     function setCookie(name, value, days) {
@@ -94,10 +121,10 @@ document.addEventListener('DOMContentLoaded', function() {
         return null;
     }
 
-    // Load components
-    loadComponent('/header.html', headerPlaceholder);
-    loadComponent('/footer.html', footerPlaceholder);
-    loadComponent('/cookie-banner.html', cookiePlaceholder);
+    // 3. LOAD COMPONENTS (Using the variables we defined at the top)
+    loadComponent(headerFile, headerPlaceholder);
+    loadComponent(footerFile, footerPlaceholder);
+    loadComponent(cookieFile, cookiePlaceholder);
 });
 
 // This function will be called by the script if consent is given
