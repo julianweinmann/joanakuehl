@@ -8,6 +8,10 @@
     <meta name="description" content="Joana Kühl bietet systemische und HSP-Beratung in Berlin & online. Spezialisierung auf Hochsensibilität, Kinder & Eltern, persönliche Entwicklung und Selbstfürsorge. Meine Arbeit orientiert sich an Prinzipien der Systemischen Therapie, wird jedoch als Beratung angeboten.">
     <meta name="keywords" content="Psychotherapie Berlin, Systemische Therapie, Systenisches Coaching, Hochsensibilität, HSP, Therapie für Kinder und Eltern, Online Therapie, Psychologische Beratung, Hochsensible Kinder, Systemische Familientherapie, Aufstellungsarbeit">
     
+    <link rel="alternate" hreflang="de" href="https://joanakuehl.com/" />
+    <link rel="alternate" hreflang="en" href="https://joanakuehl.com/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://joanakuehl.com/" />
+
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4CPETEVFE"></script>
@@ -15,6 +19,7 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+      gtag('config', 'G-Z4CPETEVFE');
     </script>
 
     <script type="application/ld+json">
@@ -38,7 +43,7 @@
         "longitude": 13.404
       },
       "hasMap": "https://www.google.com/maps/place/Joana+K%C3%BChl+-+Systemische+Beratung/@52.4873725,13.3933176,17z/data=!3m2!4b1!5s0x47a84fd9a1870075:0x2885625615061406!4m6!3m5!1s0x47a84fc0c7c9c427:0xcb4d9a2bbbec8c13!8m2!3d52.4873725!4d13.3958925!16s%2Fg%2F11yn8ttk39?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D",
-        "openingHoursSpecification": [{
+      "openingHoursSpecification": [{
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
         "opens": "09:00",
@@ -121,16 +126,18 @@
         section { padding: 4rem 1rem; }
         @media (min-width: 768px) { section { padding: 6rem 2rem; } }
         
+        /* HERO FIX APPLIED HERE */
         .hero-background {
-            background-image: url('https://joanakuehl.com/hero-mobile.png');
+            background-image: url('/hero-mobile.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            background-attachment: fixed;
+            background-attachment: scroll; /* Fix for mobile devices */
         }
         @media (min-width: 768px) {
             .hero-background {
-                background-image: url('https://joanakuehl.com/image_c24324.png');
+                background-image: url('/image_c24324.png');
+                background-attachment: fixed; /* Parallax only on desktop */
             }
         }
 
