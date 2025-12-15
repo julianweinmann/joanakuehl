@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Form - Joana Kühl</title>
+    <meta name="description" content="Please fill out the start form to confirm the conditions for psychological counseling with Joana Kühl.">
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="alternate" hreflang="de" href="https://joanakuehl.com/startformular/" />
+    <link rel="alternate" hreflang="en" href="https://joanakuehl.com/en/start-form/" />
+    <link rel="alternate" hreflang="x-default" href="https://joanakuehl.com/startformular/" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4CPETEVFE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Z4CPETEVFE');
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #FAF9F7; color: #5C5C5C; }
+        h1, h2, .nav-font { font-family: 'Montserrat', sans-serif; }
+        .form-input { background-color: #FFFFFF; border: 1px solid #D1D5DB; color: #111827; font-size: 1rem; border-radius: 0.75rem; padding: 0.75rem; width: 100%; transition: border-color 0.2s, box-shadow 0.2s; }
+        .form-input:focus { outline: none; border-color: #F29979; box-shadow: 0 0 0 3px rgba(242, 153, 121, 0.3); }
+        .shadow-soft { box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); }
+
+        .hero-background {
+            background-image: url('/hero-mobile.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        @media (min-width: 768px) {
+            .hero-background {
+                background-image: url('/image_c24324.png');
+            }
+        }
+
+        .nav-sticky { position: sticky; top: 0; z-index: 50; }
+        .nav-scrolled {
+            background-color: rgba(255, 255, 255, 0.9); 
+            backdrop-filter: blur(10px); 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+        }
+        .bg-accent-orange { background-color: #F29979; }
+        .hover\:bg-accent-orange-dark:hover { background-color: #e68a68; }
+        .text-accent-orange { color: #F29979; }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <div id="header-placeholder"></div>
+
+    <main class="flex-grow">
+        <div class="hero-background">
+            <div class="container mx-auto px-4 py-16 md:py-24 max-w-3xl">
+                <h1 class="text-4xl md:text-5xl font-semibold text-gray-800 mb-8 text-center">Start Form</h1>
+                <div class="bg-white/80 backdrop-blur-sm p-6 md:p-12 rounded-2xl shadow-soft text-base leading-relaxed">
+                    <div class="text-center mb-8 space-y-4">
+                        <p>Thank you for your trust. Please fill out this form before our first conversation so we can focus fully on you and your concerns when we meet.</p>
+                        <p>Counseling is a private service (not covered by public health insurance) and the fee is 80 € per 50 minutes. If you have a low income, please feel free to ask me about reduced rates.</p>
+                    </div>
+                    
+                    <hr class="my-8 border-gray-200">
+
+                    <h2 class="text-2xl font-semibold text-gray-700 text-center mb-6">Declaration of Consent</h2>
+
+                    <form action="https://form.taxi/s/91u7s0gv" method="POST" class="space-y-6">
+                        <input type="hidden" name="_redirect" value="https://joanakuehl.com/en/thank-you/" />
+                        
+                        <div>
+                            <label for="vorname" class="block mb-2 text-sm font-medium">First Name</label>
+                            <input type="text" id="vorname" name="vorname" class="form-input" required />
+                        </div>
+                        <div>
+                            <label for="nachname" class="block mb-2 text-sm font-medium">Last Name</label>
+                            <input type="text" id="nachname" name="nachname" class="form-input" required />
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2 text-sm font-medium">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-input" required />
+                        </div>
+                        <div>
+                            <label for="strasse" class="block mb-2 text-sm font-medium">Street and Number</label>
+                            <input type="text" id="strasse" name="strasse" class="form-input" required />
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="md:col-span-1">
+                                <label for="plz" class="block mb-2 text-sm font-medium">Postal Code</label>
+                                <input type="text" id="plz" name="plz" class="form-input" required />
+                            </div>
+                            <div class="md:col-span-2">
+                                <label for="ort" class="block mb-2 text-sm font-medium">City</label>
+                                <input type="text" id="ort" name="ort" class="form-input" required />
+                            </div>
+                        </div>
+                        <div class="pt-4">
+                            <label class="flex items-start">
+                                <input type="checkbox" name="zustimmung" class="h-5 w-5 mt-1 rounded border-gray-300 text-accent-orange focus:ring-accent-orange" required />
+                                <span class="ml-3 text-sm">I have read the <a href="/en/terms/" target="_blank" class="underline hover:text-accent-orange">Terms & Conditions</a> and agree to the processing of my data.</span>
+                            </label>
+                        </div>
+                        <div class="pt-4">
+                            <button type="submit" class="w-full bg-accent-orange text-white font-semibold py-3 px-6 rounded-full shadow-soft hover:bg-accent-orange-dark transition-colors duration-300">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    
+    <script src="/script.js"></script>
+
+</body>
+</html>
