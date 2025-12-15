@@ -1,25 +1,52 @@
-<!-- FOOTER -->
-<footer class="bg-white text-gray-600 border-t border-gray-200">
-    <div class="container mx-auto px-6 py-12">
-        <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-4 md:space-y-0">
+<!-- HEADER -->
+<style>
+    .bg-accent-orange { background-color: #F29979; }
+    .hover\:bg-accent-orange-dark:hover { background-color: #e68a68; }
+    .text-accent-orange { color: #F29979; }
+    .shadow-soft { box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); }
+    
+    /* This class is added by script.js and ensures the white background */
+    .nav-scrolled {
+        background-color: rgba(255, 255, 255, 0.95) !important; /* Use !important to ensure it overrides other styles */
+        backdrop-filter: blur(10px); 
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+    }
+</style>
+
+<nav id="navbar" class="nav-font">
+    <div class="container mx-auto px-6">
+        <div class="flex justify-between items-center py-4">
+            <a href="/en/" class="text-lg font-semibold text-warm-grey" style="color: #4a4a4a;">Joana Kühl</a>
             
-            <div class="md:order-1">
-                <p class="text-sm">&copy; 2025 Joana Kühl. From Berlin with ❤️</p>
-            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="/en/#about" class="text-gray-600 hover:text-accent-orange transition-colors">About Me</a>
+                <a href="/en/#services" class="text-gray-600 hover:text-accent-orange transition-colors">Services</a>
+                
+                <a href="/en/start-form/" class="text-gray-600 hover:text-accent-orange transition-colors">Start Form</a>
 
-            <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 md:order-3">
-                 <a href="/en/imprint/" class="text-sm hover:text-accent-orange transition-colors">Imprint</a>
-                 <span class="opacity-50 hidden md:inline">|</span>
-                 
-                 <a href="/en/privacy/" class="text-sm hover:text-accent-orange transition-colors">Privacy</a>
-                 <span class="opacity-50 hidden md:inline">|</span>
-                 
-                 <a href="/en/terms/" class="text-sm hover:text-accent-orange transition-colors">Terms & Conditions</a>
+                <a href="/" class="text-sm font-medium text-gray-400 hover:text-accent-orange transition-colors" title="Switch to German">DE</a>
             </div>
-
-            <div class="md:order-2">
-                <a href="mailto:info@joanakuehl.com" class="text-sm hover:text-accent-orange transition-colors">info@joanakuehl.com</a>
+            
+            <div class="hidden md:block">
+                <a href="/en/booking/" class="bg-accent-orange text-white font-semibold py-2 px-6 rounded-full shadow-soft hover:bg-accent-orange-dark transition-colors duration-300">Book Appointment</a>
+            </div>
+            
+            <div class="md:hidden flex items-center space-x-4">
+                <a href="/" class="text-sm font-medium text-gray-600 hover:text-accent-orange">DE</a>
+                
+                <button id="menu-btn" class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
             </div>
         </div>
     </div>
-</footer>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg rounded-b-lg shadow-md">
+        <a href="/en/#about" class="block py-3 px-6 text-sm hover:bg-gray-200">About Me</a>
+        <a href="/en/#services" class="block py-3 px-6 text-sm hover:bg-gray-200">Services</a>
+        <a href="/en/start-form/" class="block py-3 px-6 text-sm hover:bg-gray-200">Start Form</a>
+        <div class="p-4">
+            <a href="/en/booking/" class="block text-center w-full bg-accent-orange text-white font-semibold py-3 px-6 rounded-full shadow-soft hover:bg-accent-orange-dark transition-colors duration-300">Book Appointment</a>
+        </div>
+    </div>
+</nav>
