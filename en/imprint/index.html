@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imprint - Joana Kühl</title>
+    <meta name="description" content="Imprint and legal notice for the website of Joana Kühl, Psychological Counseling in Berlin.">
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="alternate" hreflang="de" href="https://joanakuehl.com/impressum/" />
+    <link rel="alternate" hreflang="en" href="https://joanakuehl.com/en/imprint/" />
+    <link rel="alternate" hreflang="x-default" href="https://joanakuehl.com/impressum/" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4CPETEVFE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Z4CPETEVFE');
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #FAF9F7; 
+            color: #5C5C5C;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex-grow: 1;
+        }
+        h1, h2, .nav-font { font-family: 'Montserrat', sans-serif; }
+        .content-box h2 { font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; color: #4a4a4a; }
+        .content-box a { color: #F29979; text-decoration: underline; }
+        
+        /* Use absolute path for images */
+        .hero-background {
+            background-image: url('/hero-mobile.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        @media (min-width: 768px) {
+            .hero-background {
+                background-image: url('/image_c24324.png');
+            }
+        }
+
+        .nav-sticky { position: sticky; top: 0; z-index: 50; }
+        .nav-scrolled { background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    </style>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="hero-background">
+            <div class="container mx-auto px-6 py-16 md:py-24 max-w-3xl">
+                <h1 class="text-4xl md:text-5xl font-semibold text-gray-800 mb-8 text-center">Imprint</h1>
+                <div class="bg-white/80 backdrop-blur-sm p-8 md:p-12 rounded-2xl shadow-soft content-box text-base leading-relaxed">
+                    
+                    <h2>Information according to § 5 TMG</h2>
+                    <p>Joana Kühl<br>
+                        c/o Julian Weinmann<br>
+                        Willibald-Alexis-Straße 3<br>
+                        10965 Berlin<br>
+                        Germany</p>
+                    
+                    <h2>Contact</h2>
+                    <p>Email: <a href="mailto:info@joanakuehl.com">info@joanakuehl.com</a></p>
+                    
+                    <h2>Professional Activity</h2>
+                    <p>Psychological counseling as part of the training to become a psychotherapist<br>
+                    Training Institute: ISTB – Institut für Systemische Therapie und Beratung</p>
+                    
+                    <h2>Responsible for content according to § 55 Abs. 2 RStV</h2>
+                    <p>Joana Kühl</p>
+
+                    <p class="mt-8">No VAT ID available.<br>
+                    Small business regulation applied according to § 19 UStG.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <div id="cookie-banner-placeholder"></div>
+
+    <script src="/script.js"></script>
+
+</body>
+</html>
