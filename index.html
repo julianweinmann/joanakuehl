@@ -11,6 +11,7 @@
     <link rel="alternate" hreflang="de" href="https://joanakuehl.com/" />
     <link rel="alternate" hreflang="en" href="https://joanakuehl.com/en/" />
     <link rel="alternate" hreflang="x-default" href="https://joanakuehl.com/" />
+
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4CPETEVFE"></script>
@@ -42,69 +43,51 @@
         "longitude": 13.404
       },
       "areaServed": ["Berlin", "Online", "Deutschland"],
-      "serviceType": ["Systemische Beratung", "Psychotherapie", "HSP Coaching", "Innere Kind Arbeit", "Burnout prävention"]
+      "serviceType": [
+        "Systemische Beratung",
+        "Systemische Psychotherapie",
+        "HSP Coaching",
+        "Innere Kind Arbeit",
+        "Burnout prävention",
+        "Beratung für Kinder und Jugendliche"
+      ]
     }
     </script>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     
     <style>
-        /* PREMIUM TYPOGRAPHY & COLORS */
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: #FAF9F7; 
-            color: #4A4A4A; /* Slightly darker for better readability */
-            line-height: 1.8; /* Increased for "premium" feel */
-        }
-        h1, h2, h3 { 
-            font-family: 'Montserrat', sans-serif; 
-            letter-spacing: -0.02em; 
-            color: #2D2D2D;
-        }
-        .tracking-premium { letter-spacing: 0.05em; }
-        
-        /* UI ELEMENTS */
+        body { font-family: 'Inter', sans-serif; background-color: #FAF9F7; color: #5C5C5C; }
+        main { flex-grow: 1; }
+        h1, h2, h3, .nav-font { font-family: 'Montserrat', sans-serif; }
         .bg-cloudy-mint { background-color: #D9ECE6; }
         .bg-light-beige { background-color: #FAF9F7; }
         .text-accent-orange { color: #F29979; }
         .bg-accent-orange { background-color: #F29979; }
-        
-        /* SOFT PREMIUM SHADOW */
-        .shadow-premium {
-            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04), 0 4px 10px -5px rgba(0, 0, 0, 0.02);
-        }
-        
+        .border-accent-orange { border-color: #F29979; }
+        .shadow-soft { box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); }
         html { scroll-behavior: smooth; }
-        section { padding: 5rem 1.5rem; }
-        @media (min-width: 768px) { section { padding: 8rem 2rem; } }
+        section { padding: 4rem 1rem; }
+        @media (min-width: 768px) { section { padding: 6rem 2rem; } }
         
         .hero-background {
-            background-image: linear-gradient(rgba(250, 249, 247, 0.4), rgba(250, 249, 247, 0.4)), url('/hero-mobile.png');
+            background-image: url('/hero-mobile.png');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
             background-attachment: scroll;
         }
         @media (min-width: 768px) {
             .hero-background {
-                background-image: linear-gradient(rgba(250, 249, 247, 0.3), rgba(250, 249, 247, 0.3)), url('/image_c24324.png');
+                background-image: url('/image_c24324.png');
                 background-attachment: fixed;
             }
         }
-        
         .nav-sticky { position: sticky; top: 0; z-index: 50; }
-        .nav-scrolled { background-color: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); }
-
-        /* BUTTON ANIMATION */
-        .btn-premium {
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
-        .btn-premium:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(242, 153, 121, 0.3);
-        }
+        .nav-scrolled { background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
     </style>
 </head>
 <body>
@@ -112,103 +95,90 @@
     <div id="header-placeholder"></div>
 
     <main>
-        <header id="home" class="hero-background min-h-screen flex items-center">
-            <div class="container mx-auto px-6 text-center">
-                <span class="tracking-premium uppercase text-sm font-medium text-gray-500 mb-4 block">Joana Kühl</span>
-                <h1 class="text-4xl md:text-7xl font-light text-gray-800 mb-6">
-                    Systemische Beratung <br class="hidden md:block"> <span class="font-medium text-gray-900 italic">in Berlin & Online</span>
-                </h1>
-                <p class="text-lg md:text-xl text-gray-600 max-w-xl mx-auto mb-10 leading-relaxed font-light">
+        <header id="home" class="hero-background">
+            <div class="container mx-auto px-6 pt-20 pb-32 md:pt-20 md:pb-40 text-center flex flex-col items-center justify-center h-screen min-h-[700px]">
+                <h1 class="text-4xl md:text-6xl font-semibold text-warm-grey mb-4" style="color: #4a4a4a;">Joana Kühl</h1>
+                <h2 class="text-2xl md:text-3xl text-warm-grey mb-6" style="color: #5C5C5C;">Systemische Beratung in Berlin & Online</h2>
+                <p class="text-lg md:text-xl text-warm-grey max-w-2xl mx-auto mb-8 mt-4">
                     In einem sicheren Raum gemeinsam neue Wege entdecken
                 </p>
-                <div class="flex justify-center">
-                    <a href="#fuer-wen" class="animate-bounce text-gray-400">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 14l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </a>
-                </div>
             </div>
         </header>
 
-        <section id="ueber-mich" class="bg-white">
-            <div class="container mx-auto px-6 max-w-5xl">
-                <div class="md:flex md:items-center md:space-x-20">
-                    <div class="md:w-2/5 mb-12 md:mb-0">
-                        <div class="relative inline-block">
-                            <div class="absolute -top-4 -left-4 w-full h-full bg-cloudy-mint rounded-full -z-10 opacity-40"></div>
-                            <img src="/image_c2221d.png" 
-                                 alt="Joana Kühl - Systemische Beratung Berlin" 
-                                 class="rounded-full shadow-premium w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-white">
-                        </div>
+        <section id="ueber-mich" class="bg-light-beige">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="md:flex md:items-center md:space-x-12">
+                    <div class="md:w-1/3 mb-8 md:mb-0 text-center">
+                        <img src="/image_c2221d.png" 
+                             alt="Joana Kühl - Systemische Beratung Berlin Online, Innere Kind Arbeit, HSP Hochsensibilität, Burnout Prävention, Kinder und Jugendliche Begleitung" 
+                             class="rounded-full mx-auto shadow-soft w-48 h-48 md:w-64 md:h-64 object-cover">
                     </div>
-                    <div class="md:w-3/5">
-                        <h2 class="text-3xl md:text-4xl font-normal mb-8 leading-tight">Über Mich</h2>
-                        <div class="space-y-6 text-gray-600 text-lg font-light">
-                            <p>Herzlich willkommen. Mein Name ist Joana. Als Systemische Therapeutin i.A. ist es meine Herzensangelegenheit, Dich auf Deinem Weg zu begleiten. Mit einem tiefen Verständnis für die Komplexität menschlicher Emotionen biete ich Dir einen sicheren Raum für inneres Wachstum.</p>
-                            <p>Mein systemischer Ansatz ermöglicht es uns, nicht nur individuelle Herausforderungen zu betrachten, sondern auch die Dynamiken in Deinem Umfeld. Ich arbeite wissenschaftlich fundiert, intuitiv begleitet und mit viel Herz.</p>
-                        </div>
+                    <div class="md:w-2/3">
+                        <h2 class="text-3xl md:text-4xl font-medium text-warm-grey mb-6 text-center md:text-left">Über Mich</h2>
+                        <p class="text-lg mb-4 leading-relaxed">
+                            Herzlich willkommen. Mein Name ist Joana. Als Systemische Therapeutin i.A. ist es meine Herzensangelegenheit, Dich auf Deinem Weg zu begleiten. Mit einem tiefen Verständnis für die Komplexität menschlicher Emotionen biete ich Dir online oder in Berlin einen sicheren Raum für inneres Wachstum und Selbstentfaltung.
+                        </p>
+                        <p class="text-lg leading-relaxed">
+                            Mein systemischer Ansatz ermöglicht es uns, nicht nur individuelle Herausforderungen zu betrachten, sondern auch die Dynamiken in Deinen Beziehungen und Deinem Umfeld. Ein besonderer Schwerpunkt meiner Arbeit liegt auf der Begleitung von hochsensiblen Menschen. Dabei arbeite ich wissenschaftlich fundiert, intuitiv begleitet und mit viel Herz. Ich bin überzeugt, dass Empathie und eine vertrauensvolle Beziehung die Basis für nachhaltige Veränderungsprozesse bilden.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="fuer-wen" class="bg-light-beige">
-            <div class="container mx-auto px-6 max-w-4xl">
-                <div class="bg-white p-10 md:p-16 rounded-3xl shadow-premium border border-gray-100">
-                    <h2 class="text-3xl md:text-4xl font-normal text-center mb-12">Du bist bei mir richtig, wenn...</h2>
-                    <ul class="space-y-8 text-lg text-gray-600">
+        <section id="fuer-wen" class="hero-background">
+            <div class="container mx-auto px-4 py-16 md:py-24 text-center">
+                <div class="max-w-4xl mx-auto bg-white/80 backdrop-blur-sm p-8 md:p-12 rounded-2xl shadow-soft">
+                    <h2 class="text-3xl md:text-4xl font-medium text-warm-grey mb-8">Du bist bei mir richtig, wenn...</h2>
+                    <ul class="space-y-6 text-lg text-gray-700 text-left mb-8">
                         <li class="flex items-start">
-                            <div class="bg-cloudy-mint p-2 rounded-full mr-5 mt-1">
-                                <svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                            </div>
+                            <svg class="w-7 h-7 text-accent-orange mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                             <span>Du wünschst Dir mehr <strong>Klarheit über Deine Hochsensibilität</strong> und möchtest lernen, besser damit umzugehen.</span>
                         </li>
                         <li class="flex items-start">
-                            <div class="bg-cloudy-mint p-2 rounded-full mr-5 mt-1">
-                                <svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                            </div>
+                             <svg class="w-7 h-7 text-accent-orange mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                             <span>Du suchst Unterstützung im Umgang mit <strong>alltäglichen Herausforderungen</strong> wie Reizüberflutung oder Abgrenzung.</span>
                         </li>
                         <li class="flex items-start">
-                            <div class="bg-cloudy-mint p-2 rounded-full mr-5 mt-1">
-                                <svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                            </div>
-                            <span>Du steckst in einer <strong>Krise</strong> oder wünschst Dir Begleitung, um wieder mehr in <strong>Deine Kraft</strong> zu kommen.</span>
+                             <svg class="w-7 h-7 text-accent-orange mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>Du steckst in einer <strong>Krise</strong> oder wünschst Dir Begleitung, um wieder mehr in <strong>Deine Kraft</strong> zu kommen und Dein volles Potenzial zu entfalten.</span>
                         </li>
                         <li class="flex items-start">
-                            <div class="bg-cloudy-mint p-2 rounded-full mr-5 mt-1">
-                                <svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                            </div>
-                            <span>Du bist selbst <strong>hochsensibel und Elternteil</strong> und suchst Unterstützung im Spagat der Selbstfürsorge.</span>
+                            <svg class="w-7 h-7 text-accent-orange mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>Du möchtest Dein <strong>hochsensibles Kind</strong> besser verstehen und feinfühlig begleiten.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-7 h-7 text-accent-orange mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>Du bist selbst <strong>hochsensibel und Elternteil</strong> und suchst Unterstützung im Spagat zwischen Selbstfürsorge und Elternschaft.</span>
                         </li>
                     </ul>
 
-                    <div class="mt-16 text-center border-t border-gray-100 pt-10">
-                        <p class="text-gray-400 font-normal mb-8 text-base tracking-wide">
-                            Kurzfristige Termine möglich & Absolute Vertraulichkeit
-                        </p>
-                        <a href="/termin/" class="btn-premium inline-block bg-accent-orange text-white font-medium py-4 px-12 rounded-full shadow-lg">
-                            Termin buchen
-                        </a>
+                    <p class="text-gray-600 font-medium text-lg mb-8 italic">
+                        Kurzfristige Termine möglich & Absolute Vertraulichkeit (keine Datenübermittlung an Krankenkassen)
+                    </p>
+
+                    <div class="text-center">
+                        <a href="/termin/" class="inline-block bg-accent-orange text-white font-semibold py-3 px-8 rounded-full shadow-soft hover:bg-[#e68a68] transition-colors duration-300">Termin buchen</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="angebot" class="bg-white">
-            <div class="container mx-auto px-6 max-w-6xl">
-                <h2 class="text-3xl md:text-4xl font-normal text-center mb-16">Mein Angebot</h2>
-                <div class="grid md:grid-cols-3 gap-10">
-                    <div class="group p-10 rounded-2xl border border-gray-100 bg-light-beige hover:bg-white hover:shadow-premium transition-all duration-500">
-                        <h3 class="text-xl font-medium mb-4">Einzelberatung</h3>
-                        <p class="text-gray-500 font-light">Individuelle Begleitung bei persönlichen Krisen und dem Wunsch nach Weiterentwicklung.</p>
+        <section id="angebot" class="bg-cloudy-mint">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-medium text-warm-grey mb-12 text-center">Mein Angebot für Dich in Berlin & Online</h2>
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="bg-white p-8 rounded-2xl shadow-soft text-center">
+                        <h3 class="text-2xl font-medium text-warm-grey mb-4">Einzelgespräche</h3>
+                        <p class="text-base leading-relaxed">Individuelle Begleitung bei persönlichen Krisen, beruflichen Herausforderungen oder dem Wunsch nach persönlicher Weiterentwicklung.</p>
                     </div>
-                    <div class="group p-10 rounded-2xl border border-gray-100 bg-light-beige hover:bg-white hover:shadow-premium transition-all duration-500">
-                        <h3 class="text-xl font-medium mb-4">Kinder & Eltern</h3>
-                        <p class="text-gray-500 font-light">Unterstützung bei familiären Herausforderungen und feinfühliger Erziehung.</p>
+                    <div class="bg-white p-8 rounded-2xl shadow-soft text-center">
+                        <h3 class="text-2xl font-medium text-warm-grey mb-4">Kinder, Jugend & Eltern</h3>
+                        <p class="text-base leading-relaxed">Unterstützung für Kinder, Jugendliche und Eltern bei familiären Herausforderungen, Entwicklungsfragen oder in Krisensituationen.</p>
                     </div>
-                    <div class="group p-10 rounded-2xl border border-gray-100 bg-light-beige hover:bg-white hover:shadow-premium transition-all duration-500">
-                        <h3 class="text-xl font-medium mb-4">HSP-Coaching</h3>
-                        <p class="text-gray-500 font-light">Spezialisierte Beratung, um die Hochsensibilität als Stärke im Alltag zu nutzen.</p>
+                    <div class="bg-white p-8 rounded-2xl shadow-soft text-center">
+                        <h3 class="text-2xl font-medium text-warm-grey mb-4">HSP-Coaching</h3>
+                        <p class="text-base leading-relaxed">Spezialisierte Beratung für hochsensible Personen (HSP), um Deine Stärken zu erkennen und den Alltag gelassener zu meistern.</p>
                     </div>
                 </div>
             </div>
@@ -216,6 +186,8 @@
     </main>
 
     <div id="footer-placeholder"></div>
+    <div id="cookie-banner-placeholder"></div>
+    
     <script src="/script.js"></script>
 </body>
 </html>
