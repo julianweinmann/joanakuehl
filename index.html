@@ -187,7 +187,98 @@
                         <p class="text-base leading-relaxed">Spezialisierte Beratung für hochsensible Personen (HSP), um Deine Stärken zu erkennen und den Alltag gelassener zu meistern.</p>
                     </div>
                 </div>
+                 <div class="text-center mt-12">
+                    <a href="/rahmenbedingungen/" class="inline-block border border-accent-orange text-accent-orange font-semibold py-2 px-6 rounded-full hover:bg-accent-orange hover:text-white transition-colors duration-300">Zu den Rahmenbedingungen</a>
+                </div>
             </div>
+        </section>
+
+        <section id="bewertungen" class="bg-light-beige">
+            <div class="container mx-auto px-6 max-w-4xl text-center">
+                <h2 class="text-3xl md:text-4xl font-medium text-warm-grey mb-4">Was meine Klient:innen sagen</h2>
+                <div class="flex items-center justify-center gap-1 mb-8">
+                    <span class="text-yellow-400 text-2xl">★★★★★</span>
+                    <span class="text-gray-500 text-lg ml-2">5.0 auf Google (6 Bewertungen)</span>
+                </div>
+
+                <div class="relative max-w-2xl mx-auto mb-8">
+                    <div id="review-carousel" class="overflow-hidden">
+                        <div id="review-track" class="flex transition-transform duration-500 ease-in-out">
+                            <div class="w-full flex-shrink-0 px-2">
+                                <div class="bg-white p-6 rounded-2xl shadow-soft text-left">
+                                    <p class="text-yellow-400 mb-1">★★★★★</p>
+                                    <p class="font-semibold mb-2" style="color: #4a4a4a;">Anna M.</p>
+                                    <p class="text-base leading-relaxed italic">„Joana schafft es, einen Raum zu kreieren, in dem man sich sicher und verstanden fühlt. Ihre einfühlsame Art und ihr systemischer Ansatz haben mir sehr geholfen."</p>
+                                </div>
+                            </div>
+                            <div class="w-full flex-shrink-0 px-2">
+                                <div class="bg-white p-6 rounded-2xl shadow-soft text-left">
+                                    <p class="text-yellow-400 mb-1">★★★★★</p>
+                                    <p class="font-semibold mb-2" style="color: #4a4a4a;">Lena K.</p>
+                                    <p class="text-base leading-relaxed italic">„Ich kann die Beratung bei Joana von Herzen empfehlen. Sie ist empathisch, professionell und geht individuell auf jeden ein."</p>
+                                </div>
+                            </div>
+                            <div class="w-full flex-shrink-0 px-2">
+                                <div class="bg-white p-6 rounded-2xl shadow-soft text-left">
+                                    <p class="text-yellow-400 mb-1">★★★★★</p>
+                                    <p class="font-semibold mb-2" style="color: #4a4a4a;">Miriam S.</p>
+                                    <p class="text-base leading-relaxed italic">„Durch die Gespräche mit Joana habe ich gelernt, meine Hochsensibilität als Stärke zu sehen. Ich fühle mich verstanden und gut aufgehoben."</p>
+                                </div>
+                            </div>
+                            <div class="w-full flex-shrink-0 px-2">
+                                <div class="bg-white p-6 rounded-2xl shadow-soft text-left">
+                                    <p class="text-yellow-400 mb-1">★★★★★</p>
+                                    <p class="font-semibold mb-2" style="color: #4a4a4a;">Thomas B.</p>
+                                    <p class="text-base leading-relaxed italic">„Joana hat unserer Familie geholfen, wieder besser miteinander zu kommunizieren. Ihre ruhige und klare Art macht es leicht, sich zu öffnen."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="review-prev" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 bg-white rounded-full shadow-soft flex items-center justify-center text-gray-400 hover:text-accent-orange transition-colors" aria-label="Vorherige Bewertung">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                    </button>
+                    <button id="review-next" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 bg-white rounded-full shadow-soft flex items-center justify-center text-gray-400 hover:text-accent-orange transition-colors" aria-label="Nächste Bewertung">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                    <div id="review-dots" class="flex justify-center gap-2 mt-6">
+                        <button class="w-2.5 h-2.5 rounded-full bg-accent-orange" data-index="0" aria-label="Bewertung 1"></button>
+                        <button class="w-2.5 h-2.5 rounded-full bg-gray-300" data-index="1" aria-label="Bewertung 2"></button>
+                        <button class="w-2.5 h-2.5 rounded-full bg-gray-300" data-index="2" aria-label="Bewertung 3"></button>
+                        <button class="w-2.5 h-2.5 rounded-full bg-gray-300" data-index="3" aria-label="Bewertung 4"></button>
+                    </div>
+                </div>
+
+                <a href="https://maps.app.goo.gl/DinBvGVaCkyZe1q29" target="_blank" rel="noopener noreferrer" class="inline-block border border-accent-orange text-accent-orange font-semibold py-2 px-6 rounded-full hover:bg-accent-orange hover:text-white transition-colors duration-300">Alle Bewertungen auf Google →</a>
+            </div>
+
+            <script>
+                (function() {
+                    const track = document.getElementById('review-track');
+                    const dots = document.querySelectorAll('#review-dots button');
+                    const prevBtn = document.getElementById('review-prev');
+                    const nextBtn = document.getElementById('review-next');
+                    let current = 0;
+                    const total = dots.length;
+
+                    function goTo(index) {
+                        current = ((index % total) + total) % total;
+                        track.style.transform = `translateX(-${current * 100}%)`;
+                        dots.forEach((dot, i) => {
+                            dot.classList.toggle('bg-accent-orange', i === current);
+                            dot.classList.toggle('bg-gray-300', i !== current);
+                        });
+                    }
+
+                    prevBtn.addEventListener('click', () => goTo(current - 1));
+                    nextBtn.addEventListener('click', () => goTo(current + 1));
+                    dots.forEach(dot => dot.addEventListener('click', () => goTo(parseInt(dot.dataset.index))));
+
+                    let autoplay = setInterval(() => goTo(current + 1), 6000);
+                    const carousel = document.getElementById('review-carousel');
+                    carousel.addEventListener('mouseenter', () => clearInterval(autoplay));
+                    carousel.addEventListener('mouseleave', () => { autoplay = setInterval(() => goTo(current + 1), 6000); });
+                })();
+            </script>
         </section>
     </main>
 
