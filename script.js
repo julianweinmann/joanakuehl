@@ -38,12 +38,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         if (nav) {
-            nav.classList.add('nav-sticky');
-            
+            // Apply sticky to the placeholder (direct child of body) so it actually sticks
+            // Sticky on the nav itself doesn't work because its parent (placeholder)
+            // is only as tall as the nav, giving it no room to stick.
+            headerPlaceholder.style.position = 'sticky';
+            headerPlaceholder.style.top = '0';
+            headerPlaceholder.style.zIndex = '50';
+
             // Check if we are on the Home page (German OR English)
-            const isHomePage = window.location.pathname === '/' || 
-                               window.location.pathname === '/index.html' || 
-                               window.location.pathname === '/en/' || 
+            const isHomePage = window.location.pathname === '/' ||
+                               window.location.pathname === '/index.html' ||
+                               window.location.pathname === '/en/' ||
                                window.location.pathname === '/en/index.html';
 
             const handleScroll = () => {
